@@ -399,3 +399,81 @@ h3 { font-size: 1.45rem; letter-spacing: -.025em; }
     height: 112px !important;
   }
 }
+
+/* Grounded, aspect-ratio-safe project imagery */
+.project-card .project-visual.photo-visual,
+.project-card.featured .project-visual.photo-visual,
+.project-card:not(.featured) .project-visual.photo-visual {
+  width: auto !important;
+  height: auto !important;
+  aspect-ratio: 16 / 10 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  background: #081018 !important;
+  border: 1px solid rgba(255,255,255,.075) !important;
+  border-radius: 12px !important;
+}
+
+.project-card.featured .project-visual.photo-visual {
+  width: 180px !important;
+  margin: 20px 0 20px 20px !important;
+}
+
+.project-card:not(.featured) .project-visual.photo-visual {
+  width: calc(100% - 36px) !important;
+  max-width: 360px !important;
+  margin: 18px auto 0 !important;
+}
+
+.project-card .visual-sprite {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 16 / 10 !important;
+  background-size: 300% 200% !important;
+  background-repeat: no-repeat !important;
+  transform: none !important;
+  filter: saturate(.72) contrast(.94) brightness(.92) !important;
+}
+
+.project-card:hover .visual-sprite {
+  transform: none !important;
+  filter: saturate(.78) contrast(.96) brightness(.94) !important;
+}
+
+/* Keep the research visual restrained too. */
+.research-image-frame {
+  width: min(100%, 430px) !important;
+  height: auto !important;
+  aspect-ratio: 16 / 10 !important;
+}
+.research-image-frame .visual-sprite {
+  aspect-ratio: 16 / 10 !important;
+  filter: saturate(.72) contrast(.94) brightness(.92) !important;
+}
+
+/* Gentle frame overlay instead of glow-heavy styling. */
+.project-card .photo-visual::after,
+.research-image-frame::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background: linear-gradient(180deg, rgba(255,255,255,.01), rgba(0,0,0,.08)) !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.02) !important;
+}
+
+@media (max-width: 960px) {
+  .project-card.featured .project-visual.photo-visual {
+    width: min(62%, 300px) !important;
+    margin: 18px auto 0 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .project-card.featured .project-visual.photo-visual,
+  .project-card:not(.featured) .project-visual.photo-visual {
+    width: min(calc(100% - 36px), 320px) !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important;
+  }
+}
