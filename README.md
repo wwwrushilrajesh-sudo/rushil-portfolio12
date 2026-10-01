@@ -1,40 +1,23 @@
-# Rushil Rajesh — Engineering Portfolio
+# Rushil Rajesh Engineering Portfolio
 
-This is a static HTML/CSS/JavaScript portfolio website.
+Responsive static portfolio for CFD, scientific computing, mechanical design, product development, and mechatronics roles.
 
-## Quick start
+## Stack
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- GitHub Pages compatible
 
-1. Open `index.html` in your browser.
-2. Replace the placeholders in `index.html`:
-   - `YOUR_EMAIL@example.com`
-   - `YOUR_LINKEDIN_URL`
-   - `YOUR_GITHUB_URL`
-3. Put your actual resume in this folder and name it `resume.pdf`.
-4. Replace the placeholder CFD visual in the Research section with one of your own images.
+## Main files
+- `index.html`
+- `styles.css`
+- `script.js`
 
-## Publish free with GitHub Pages
+## Customization still needed
+Replace the placeholder email address and LinkedIn URL in `index.html`.
 
-1. Create a new GitHub repository, for example `rushil-portfolio`.
-2. Upload all files from this folder.
-3. In GitHub, open:
-   Settings → Pages
-4. Under "Build and deployment", choose:
-   Deploy from a branch
-5. Select:
-   Branch: `main`
-   Folder: `/ (root)`
-6. Save.
+The GitHub button already points to:
+https://github.com/wwwrushilrajesh-sudo
 
-Your site will then be available at a GitHub Pages URL.
-
-## Custom domain
-
-You can later point a custom domain such as `rushilrajesh.com` to GitHub Pages.
-
-## Recommended project images
-
-- Velocity / vorticity contour
-- Q-criterion visualization
-- CUDA performance chart
-- Aerospike CAD or flow visualization
-- Centrifugal pump CFD result
+## Deployment
+This repository is ready for GitHub Pages from the `main` branch and repository root.
