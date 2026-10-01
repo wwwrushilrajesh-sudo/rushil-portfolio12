@@ -3,292 +3,271 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Rushil Rajesh — Mechanical Engineer focused on CFD, scientific computing, turbulence modeling, and GPU-accelerated numerical methods." />
-  <title>Rushil Rajesh | CFD & Scientific Computing</title>
+  <meta name="description" content="Rushil Rajesh — Mechanical Engineer specializing in computational fluid dynamics, scientific computing, turbomachinery, product design, and mechatronics." />
+  <title>Rushil Rajesh | Mechanical Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="noise"></div>
-
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Home">
-      <span class="brand-mark">RR</span>
-      <span class="brand-text">Rushil Rajesh</span>
-    </a>
-
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="nav-wrap container">
+      <a href="#top" class="brand" aria-label="Home">
+        <span class="brand-mark">RR</span>
+        <span class="brand-text">Rushil Rajesh</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero section" id="home">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">MECHANICAL ENGINEERING · CFD · HPC</p>
-        <h1>
-          I build numerical tools for
-          <span class="accent-text">complex fluid flows.</span>
-        </h1>
-        <p class="hero-text">
-          M.S. Mechanical Engineering researcher focused on computational fluid dynamics,
-          turbulence modeling, incompressible flow solvers, and GPU-accelerated scientific computing.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn primary" href="#projects">View my work</a>
-          <a class="btn secondary" href="resume.pdf" target="_blank" rel="noopener">Download résumé</a>
-        </div>
-
-        <div class="quick-facts">
-          <div>
-            <span class="fact-label">Focus</span>
-            <strong>CFD & Solver Development</strong>
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-grid container">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">MECHANICAL ENGINEER • CFD • SCIENTIFIC COMPUTING</p>
+          <h1>I build numerical tools and engineered systems that turn fluid mechanics into <span class="gradient-text">working hardware.</span></h1>
+          <p class="hero-lede">M.S. Mechanical Engineering candidate at the University of Cincinnati focused on computational fluid dynamics, GPU-accelerated solver development, turbomachinery, product development, CAD, and mechatronics.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn secondary" href="#contact">Get in Touch</a>
           </div>
-          <div>
-            <span class="fact-label">Acceleration</span>
-            <strong>CUDA / GPU Computing</strong>
-          </div>
-          <div>
-            <span class="fact-label">Research</span>
-            <strong>Velocity–Impulse Methods</strong>
+          <div class="hero-metrics">
+            <div><strong>GPU CFD</strong><span>CUDA / Python</span></div>
+            <div><strong>100k</strong><span>Reynolds-number LES studies</span></div>
+            <div><strong>CAD → CAM</strong><span>Design to fabrication</span></div>
           </div>
         </div>
-      </div>
 
-      <div class="hero-visual reveal">
-        <div class="flow-card">
-          <div class="flow-top">
-            <span>velocity_impulse_solver.py</span>
-            <span class="status-dot"></span>
-          </div>
-          <pre><code><span class="code-muted"># incompressible projection</span>
-q_next = advance_impulse(q, dt)
-phi    = solve_poisson(div(q_next))
-u      = q_next - grad(phi)
-
-<span class="code-muted"># LES closure</span>
-nu_t = (Cs * delta)**2 * strain_mag
-nu_eff = nu + nu_t
-
-<span class="code-muted"># GPU execution</span>
-@cuda.jit
-def recover_velocity(...):
-    ...</code></pre>
-
-          <div class="mini-grid">
-            <div class="mini-card">
-              <span class="mini-kicker">Research</span>
-              <strong>2-D / 3-D</strong>
-              <small>Incompressible flows</small>
+        <div class="hero-visual reveal" aria-label="Abstract computational fluid dynamics visualization">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="solver-card glass">
+            <div class="terminal-head">
+              <span></span><span></span><span></span>
+              <em>solver.py</em>
             </div>
-            <div class="mini-card">
-              <span class="mini-kicker">Turbulence</span>
-              <strong>LES</strong>
-              <small>Smagorinsky modeling</small>
+            <div class="code-lines mono">
+              <p><b>01</b> q<sub>t</sub> + (u · ∇)q = ...</p>
+              <p><b>02</b> ∇²φ = ∇ · q</p>
+              <p><b>03</b> u = q − ∇φ</p>
+              <p><b>04</b> Re = 100000</p>
+              <p><b>05</b> backend = <span>CUDA</span></p>
+            </div>
+            <div class="flow-panel">
+              <div class="stream s1"></div><div class="stream s2"></div><div class="stream s3"></div><div class="stream s4"></div><div class="stream s5"></div>
+              <div class="vortex v1"></div><div class="vortex v2"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section split-section" id="about">
-      <div class="section-heading reveal">
-        <p class="eyebrow">01 / ABOUT</p>
-        <h2>Engineering at the intersection of physics and computation.</h2>
-      </div>
-
-      <div class="about-copy reveal">
-        <p>
-          I am a Mechanical Engineering graduate researcher at the University of Cincinnati,
-          working on computational methods for incompressible flow. My work combines numerical
-          analysis, turbulence modeling, and GPU computing to develop faster and more scalable CFD tools.
-        </p>
-        <p>
-          I am particularly interested in turbomachinery, compressible flow, scientific computing,
-          solver development, and high-performance simulation.
-        </p>
-
-        <div class="about-stats">
-          <div>
-            <strong>M.S.</strong>
-            <span>Mechanical Engineering</span>
-          </div>
-          <div>
-            <strong>CUDA</strong>
-            <span>GPU Solver Development</span>
-          </div>
-          <div>
-            <strong>CFD</strong>
-            <span>RANS · LES · Numerical Methods</span>
+    <section id="about" class="section section-muted">
+      <div class="container split-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">ABOUT</p>
+          <h2>Engineering across simulation, design, and computation.</h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>I am a mechanical engineer working at the intersection of computational fluid dynamics, numerical methods, and product development. My graduate research centers on an incompressible velocity–impulse formulation for high-Reynolds-number flow, including GPU acceleration, pressure/velocity recovery, turbulence modeling, and validation against canonical cavity-flow data.</p>
+          <p>Beyond solver development, I have worked on turbomachinery, aerospike nozzle design, centrifugal pump optimization, thermal systems, GD&amp;T, machining, CAM/CNC workflows, 3D printing, and mechatronics prototypes.</p>
+          <div class="about-tags">
+            <span>Fluid Mechanics</span><span>Numerical Methods</span><span>GPU Computing</span><span>Product Development</span><span>CAD / CAM</span><span>Mechatronics</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="research">
-      <div class="section-heading reveal">
-        <p class="eyebrow">02 / RESEARCH</p>
-        <h2>Velocity–impulse formulation for incompressible flow.</h2>
-        <p>
-          Thesis work investigating numerical formulations, convergence behavior,
-          turbulence modeling, and GPU performance in velocity–impulse based CFD.
-        </p>
-      </div>
-
-      <div class="research-grid">
-        <article class="research-main card reveal">
-          <div class="card-index">R1</div>
-          <h3>GPU-Accelerated Velocity–Impulse Solver</h3>
-          <p>
-            Development of 2-D and 3-D incompressible flow solvers using velocity–impulse
-            variables, projection methods, Poisson solves, and CUDA acceleration.
-          </p>
-
-          <div class="tag-row">
-            <span>Python</span>
-            <span>CUDA</span>
-            <span>Numba</span>
-            <span>LES</span>
-            <span>Projection Methods</span>
-          </div>
-
-          <div class="research-points">
-            <div>
-              <span>01</span>
-              <p>Validation using lid-driven cavity benchmark cases.</p>
-            </div>
-            <div>
-              <span>02</span>
-              <p>Comparison of velocity–impulse formulations and stability behavior.</p>
-            </div>
-            <div>
-              <span>03</span>
-              <p>3-D LES extension with Smagorinsky-type subgrid modeling.</p>
-            </div>
-            <div>
-              <span>04</span>
-              <p>GPU optimization of Poisson and field-recovery kernels.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="card visual-placeholder reveal">
-          <div class="placeholder-label">ADD YOUR CFD FIGURE HERE</div>
-          <div class="fake-contour">
-            <span></span><span></span><span></span><span></span><span></span>
-          </div>
-          <p>
-            Replace this panel with your strongest vorticity, velocity, or Q-criterion visualization.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="projects">
-      <div class="section-heading reveal">
-        <p class="eyebrow">03 / SELECTED PROJECTS</p>
-        <h2>Simulation, design, and engineering computation.</h2>
-      </div>
-
-      <div class="project-grid">
-        <article class="project-card card reveal">
-          <div class="project-number">01</div>
-          <div class="project-icon">Δp</div>
-          <h3>Centrifugal Pump CFD</h3>
-          <p>
-            Numerical study of impeller configurations and blade counts using CFD to evaluate
-            pressure rise, head, and flow behavior across multiple geometries.
-          </p>
-          <div class="tag-row">
-            <span>ANSYS</span><span>CFD</span><span>Turbomachinery</span>
-          </div>
-        </article>
-
-        <article class="project-card card reveal">
-          <div class="project-number">02</div>
-          <div class="project-icon">M∞</div>
-          <h3>Aerospike Nozzle</h3>
-          <p>
-            Designed and analyzed a truncated linear aerospike nozzle using method-of-characteristics
-            calculations, CAD, simulation, structural assessment, and prototype testing.
-          </p>
-          <div class="tag-row">
-            <span>Compressible Flow</span><span>CAD</span><span>FEA</span>
-          </div>
-        </article>
-
-        <article class="project-card card reveal">
-          <div class="project-number">03</div>
-          <div class="project-icon">GPU</div>
-          <h3>CUDA Scientific Computing</h3>
-          <p>
-            Implemented GPU kernels for iterative numerical methods and field operations,
-            with emphasis on memory access, convergence behavior, and simulation throughput.
-          </p>
-          <div class="tag-row">
-            <span>CUDA</span><span>Numba</span><span>HPC</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="skills">
-      <div class="section-heading reveal">
-        <p class="eyebrow">04 / TECHNICAL TOOLKIT</p>
-        <h2>Tools I use to turn equations into working simulations.</h2>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-group reveal">
-          <span class="skill-number">A</span>
-          <h3>Simulation</h3>
-          <p>ANSYS Fluent · CFX · STAR-CCM+ · TurboGrid · LES · RANS · Turbomachinery CFD</p>
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">FEATURED WORK</p>
+          <h2>Projects built from first principles.</h2>
+          <p class="section-sub">A selection spanning solver development, fluid machinery, propulsion, and hardware prototyping.</p>
         </div>
-        <div class="skill-group reveal">
-          <span class="skill-number">B</span>
-          <h3>Programming</h3>
-          <p>Python · CUDA · Numba · MATLAB · Numerical Methods · Scientific Computing</p>
-        </div>
-        <div class="skill-group reveal">
-          <span class="skill-number">C</span>
-          <h3>Engineering</h3>
-          <p>SolidWorks · Autodesk Inventor · Creo · FEA · GD&T · Thermal / Fluid Analysis</p>
+
+        <div class="project-grid">
+          <article class="project-card featured reveal">
+            <div class="project-visual cfd-visual">
+              <div class="grid-lines"></div>
+              <div class="contour contour-a"></div>
+              <div class="contour contour-b"></div>
+              <div class="contour contour-c"></div>
+              <span class="visual-label mono">VELOCITY–IMPULSE CFD</span>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>Graduate Research</span><span>2025–2026</span></div>
+              <h3>GPU-Accelerated Velocity–Impulse Flow Solver</h3>
+              <p>Developed a collocated incompressible flow solver using velocity–impulse variables, Poisson-based recovery, RK time integration, and GPU acceleration. Extended the framework toward high-Reynolds-number 3D cavity flow and turbulence modeling.</p>
+              <ul class="clean-list">
+                <li>Python / Numba CUDA implementation with GPU-accelerated kernels.</li>
+                <li>Investigated EL and geometric impulse formulations, projection accuracy, numerical dissipation, and pressure recovery.</li>
+                <li>Validation against canonical lid-driven cavity centerline velocity data.</li>
+                <li>3D LES / turbulence-model experiments up to Re ≈ 100,000.</li>
+              </ul>
+              <div class="tech-row"><span>Python</span><span>CUDA</span><span>CFD</span><span>LES</span><span>Numerical Methods</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual aerospike-visual">
+              <div class="nozzle-body"></div><div class="plume"></div>
+              <span class="visual-label mono">AEROSPIKE NOZZLE</span>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>Capstone</span><span>Propulsion</span></div>
+              <h3>Truncated Linear Aerospike Nozzle</h3>
+              <p>Led simulation work for a 3D truncated linear plug nozzle, combining method-of-characteristics design, CAD, FEA, additive manufacturing, and cold-flow testing.</p>
+              <ul class="clean-list">
+                <li>Designed a ~40% truncated spike geometry and supporting structure.</li>
+                <li>Used ANSYS for flow/structural studies and SolidWorks for mechanical integration.</li>
+                <li>Built and tested a 3D-printed prototype.</li>
+              </ul>
+              <div class="tech-row"><span>ANSYS</span><span>SolidWorks</span><span>MOC</span><span>FEA</span><span>3D Printing</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual pump-visual">
+              <div class="impeller">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <span class="visual-label mono">CENTRIFUGAL PUMP</span>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>Fluid Machinery</span><span>Design Study</span></div>
+              <h3>Centrifugal Pump Optimization</h3>
+              <p>Evaluated blade-count and exit-angle effects on pump performance using 2D/3D CFD, while developing the impeller as a manufacturable engineering component.</p>
+              <ul class="clean-list">
+                <li>Compared 5-, 7-, and 9-blade configurations at Re ≈ 10<sup>5</sup>.</li>
+                <li>Designed and GD&amp;T-d the impeller for a product-development course.</li>
+                <li>Integrated CAD, TurboGrid meshing, and ANSYS turbomachinery workflows.</li>
+              </ul>
+              <div class="tech-row"><span>CFX</span><span>TurboGrid</span><span>GD&amp;T</span><span>CAD</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual chair-visual">
+              <div class="chair-frame"></div><div class="wheel w-left"></div><div class="wheel w-right"></div><div class="gesture-wave">⌁⌁⌁</div>
+              <span class="visual-label mono">MECHATRONICS</span>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>Prototype</span><span>Embedded Systems</span></div>
+              <h3>Gesture-Controlled Wheelchair Prototype</h3>
+              <p>Built a hand-gesture-controlled mobility prototype combining sensing, embedded control, motor actuation, and mechanical integration.</p>
+              <ul class="clean-list">
+                <li>Arduino-based control architecture with gesture input.</li>
+                <li>Integrated mechanical, electrical, and motion-control subsystems.</li>
+                <li>Focused on low-cost prototyping and intuitive human-machine interaction.</li>
+              </ul>
+              <div class="tech-row"><span>Arduino</span><span>Mechatronics</span><span>Prototyping</span><span>Controls</span></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section contact-section" id="contact">
-      <div class="contact-card reveal">
-        <p class="eyebrow">05 / CONTACT</p>
-        <h2>Interested in CFD, turbomachinery, or scientific computing?</h2>
-        <p>
-          I’m open to opportunities in CFD engineering, solver development,
-          turbomachinery aerodynamics, and high-performance scientific computing.
-        </p>
-
-        <div class="contact-links">
-          <a href="mailto:YOUR_EMAIL@example.com">Email</a>
-          <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="YOUR_GITHUB_URL" target="_blank" rel="noopener">GitHub</a>
+    <section id="research" class="section section-dark">
+      <div class="container research-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">RESEARCH</p>
+          <h2>Numerical methods for incompressible flow.</h2>
+          <p class="section-sub">Graduate research exploring impulse-based formulations as an alternative representation of incompressible momentum dynamics.</p>
         </div>
+        <div class="research-panel reveal">
+          <div class="equation mono">q = u + ∇φ</div>
+          <div class="equation mono">∇²φ = ∇ · q</div>
+          <div class="equation mono">u = q − ∇φ</div>
+          <div class="research-copy">
+            <h3>Current focus</h3>
+            <p>Velocity–impulse formulations, projection methods, pressure recovery, LES/turbulence modeling, numerical stability, GPU performance, and centerline/field validation for high-Reynolds-number cavity flow.</p>
+            <div class="research-stats">
+              <div><strong>2D → 3D</strong><span>solver extension</span></div>
+              <div><strong>FP32 CUDA</strong><span>GPU acceleration</span></div>
+              <div><strong>Re 10²–10⁵</strong><span>validation range</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">CAPABILITIES</p>
+          <h2>From equations to geometry to hardware.</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal"><span class="skill-index mono">01</span><h3>CFD & Fluids</h3><p>Incompressible flow, turbulence, LES/RANS concepts, turbomachinery, compressible flow, numerical discretization, validation.</p><div class="skill-tags"><span>ANSYS Fluent</span><span>CFX</span><span>STAR-CCM+</span></div></div>
+          <div class="skill-card reveal"><span class="skill-index mono">02</span><h3>Scientific Computing</h3><p>GPU acceleration, iterative/direct solvers, finite differences, time integration, performance analysis, visualization.</p><div class="skill-tags"><span>Python</span><span>Numba CUDA</span><span>MATLAB</span></div></div>
+          <div class="skill-card reveal"><span class="skill-index mono">03</span><h3>Mechanical Design</h3><p>Parametric CAD, GD&amp;T, FEA-informed design, product development, drawing interpretation, design-for-manufacture.</p><div class="skill-tags"><span>SolidWorks</span><span>Fusion 360</span><span>Inventor</span><span>Creo</span></div></div>
+          <div class="skill-card reveal"><span class="skill-index mono">04</span><h3>Manufacturing</h3><p>Machining fundamentals, lathing, milling, CAM workflows, CNC code generation, additive manufacturing.</p><div class="skill-tags"><span>CAM</span><span>CNC</span><span>3D Printing</span></div></div>
+          <div class="skill-card reveal"><span class="skill-index mono">05</span><h3>Mechatronics</h3><p>Prototype integration across mechanical systems, embedded electronics, sensors, actuators, and control logic.</p><div class="skill-tags"><span>Arduino</span><span>Sensors</span><span>Motor Control</span></div></div>
+          <div class="skill-card reveal"><span class="skill-index mono">06</span><h3>Engineering Communication</h3><p>Technical documentation, research writing, plots/visualization, design reviews, presentations, and interdisciplinary collaboration.</p><div class="skill-tags"><span>Research</span><span>Technical Writing</span><span>Visualization</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-muted">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">EXPERIENCE & EDUCATION</p>
+          <h2>Engineering foundation + research depth.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-date mono">2025 — Present</div>
+            <div class="timeline-content"><h3>Graduate Research Assistant</h3><p class="muted">University of Cincinnati</p><p>Developing and validating GPU-accelerated velocity–impulse numerical methods for incompressible flows, with extensions toward three-dimensional high-Reynolds-number simulation.</p></div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-date mono">M.S.</div>
+            <div class="timeline-content"><h3>Mechanical Engineering</h3><p class="muted">University of Cincinnati</p><p>Graduate work emphasizing fluid mechanics, turbulence, acoustics, numerical methods, scientific computing, and engineering research.</p></div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-date mono">B.Tech</div>
+            <div class="timeline-content"><h3>Mechanical Engineering</h3><p class="muted">Vellore Institute of Technology</p><p>Coursework and project experience spanning product development, machine design, strength of materials, manufacturing, machining, turbomachinery, CAD, and robotics in manufacturing.</p></div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-date mono">Hands-on</div>
+            <div class="timeline-content"><h3>Course-Based Machining Apprenticeship</h3><p class="muted">Vellore Institute of Technology</p><p>Hands-on exposure to lathe and milling operations, manufacturing fundamentals, part setup, and the connection between engineering drawings and machined components.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-card reveal">
+        <div>
+          <p class="eyebrow">LET'S BUILD SOMETHING</p>
+          <h2>Open to CFD, fluids, scientific computing, turbomachinery, and product-development roles.</h2>
+          <p>Interested in numerical simulation, physical modeling, engineering software, and hardware-focused mechanical design.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:YOUR_EMAIL@example.com">Email Me</a>
+          <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn secondary" href="https://github.com/wwwrushilrajesh-sudo" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+        <p class="contact-note mono">Replace the placeholder email and LinkedIn URL in index.html when ready.</p>
       </div>
     </section>
   </main>
 
-  <footer>
-    <span>© <span id="year"></span> Rushil Rajesh</span>
-    <span>Built for engineering, research & computation.</span>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© <span id="year"></span> Rushil Rajesh</p>
+      <p class="mono">MECHANICAL • COMPUTATIONAL • BUILT</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
