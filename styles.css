@@ -188,32 +188,9 @@ h3 { font-size: 1.45rem; letter-spacing: -.025em; }
   * { scroll-behavior:auto !important; animation:none !important; transition:none !important; }
   .reveal { opacity:1; transform:none; }
 }
-.photo-visual { margin: 0; background: #050a0f; }
-.photo-visual img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .55s ease, filter .35s ease; }
-.project-card:hover .photo-visual img { transform: scale(1.025); filter: saturate(1.06) contrast(1.02); }
-.photo-visual::after { content: ""; position: absolute; inset: auto 0 0; height: 42%; background: linear-gradient(transparent, rgba(2,7,11,.78)); pointer-events: none; }
-.simulation-gallery-section { padding-top: 92px; background: linear-gradient(180deg, rgba(255,255,255,.018), transparent); }
-.simulation-gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
-.gallery-card { grid-column: span 4; margin: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.1); border-radius: 18px; background: rgba(255,255,255,.03); transition: transform .25s ease, border-color .25s ease; }
-.gallery-card:hover { transform: translateY(-4px); border-color: rgba(119,229,255,.28); }
-.gallery-card.gallery-wide { grid-column: span 8; }
-.gallery-card img { width: 100%; aspect-ratio: 16 / 10; display: block; object-fit: contain; background: #05090d; }
-.gallery-card figcaption { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; padding: 15px 17px 16px; border-top: 1px solid rgba(255,255,255,.075); }
-.gallery-card figcaption strong { font-size: .88rem; letter-spacing: -.01em; }
-.gallery-card figcaption span { color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: .66rem; text-align: right; }
-@media (max-width: 960px) {
-  .gallery-card { grid-column: span 6; }
-  .gallery-card.gallery-wide { grid-column: span 12; }
-}
-@media (max-width: 760px) {
-  .simulation-gallery { grid-template-columns: 1fr; }
-  .gallery-card, .gallery-card.gallery-wide { grid-column: 1; }
-  .gallery-card figcaption { align-items:flex-start; flex-direction:column; gap:4px; }
-  .gallery-card figcaption span { text-align:left; }
-}
 
 
-/* --- Clean technical imagery (real project figures, no text baked into images) --- */
+
 .project-card.featured {
   grid-template-columns: 1fr;
 }
@@ -263,54 +240,46 @@ h3 { font-size: 1.45rem; letter-spacing: -.025em; }
 }
 
 
-/* Portfolio media system */
-.photo-visual { background: #07131c; display: block; }
-.project-card.featured .photo-visual { min-height: 420px; }
-.project-card:not(.featured) .photo-visual { min-height: 280px; }
 
-.simulation-gallery {
+/* Compact project imagery */
+.project-card.featured {
+  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: minmax(240px, .72fr) minmax(0, 1.28fr);
+  align-items: stretch;
 }
-.gallery-card {
-  border: 1px solid rgba(255,255,255,.1);
-  border-radius: 24px;
-  overflow: hidden;
-  background: rgba(255,255,255,.03);
-  box-shadow: var(--shadow);
-  transition: transform .25s ease, border-color .25s ease;
-}
-.gallery-card:hover { transform: translateY(-4px); border-color: rgba(119,229,255,.25); }
-.gallery-card.gallery-wide { grid-column: 1 / -1; }
-.gallery-caption {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 18px 20px 20px;
-  color: #aebbc7;
-}
-.gallery-caption strong { color: var(--text); font-size: .96rem; }
-.gallery-caption span { color: var(--muted); font-size: .85rem; }
 
-.research-stack { display: grid; gap: 22px; }
-.research-image-frame {
-  border: 1px solid rgba(255,255,255,.11);
-  border-radius: 28px;
+.project-visual {
+  min-height: 0;
+}
+
+.photo-visual {
+  margin: 0;
+  background: #07131c;
   overflow: hidden;
-  background: rgba(255,255,255,.025);
-  box-shadow: var(--shadow);
+}
+
+.project-card:not(.featured) .photo-visual {
+  height: 178px;
+}
+
+.project-card.featured .photo-visual {
+  height: 220px;
+  align-self: center;
+  margin: 24px 0 24px 24px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
 }
 
 .visual-sprite {
   width: 100%;
   height: 100%;
-  min-height: inherit;
   background-image: url("assets/portfolio-sprite.webp");
   background-size: 300% 200%;
   background-repeat: no-repeat;
   background-color: #07131c;
 }
+
 .sprite-cfd { background-position: 0% 0%; }
 .sprite-aero { background-position: 50% 0%; }
 .sprite-pump { background-position: 100% 0%; }
@@ -318,7 +287,56 @@ h3 { font-size: 1.45rem; letter-spacing: -.025em; }
 .sprite-vortex { background-position: 50% 100%; }
 .sprite-bleed { background-position: 100% 100%; }
 
-.project-visual .visual-sprite { min-height: 100%; }
-.gallery-card .visual-sprite { aspect-ratio: 16 / 10; min-height: 0; }
-.gallery-card.gallery-wide .visual-sprite { aspect-ratio: 16 / 8; }
-.research-image-frame .visual-sprite { aspect-ratio: 16 / 10; min-height: 0; }
+.project-card .visual-sprite {
+  transition: transform .28s ease, filter .28s ease;
+}
+.project-card:hover .visual-sprite {
+  transform: scale(1.025);
+  filter: saturate(1.04) contrast(1.02);
+}
+
+.research-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.research-image-frame {
+  width: min(100%, 520px);
+  height: 190px;
+  margin: 0 auto;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,.025);
+  box-shadow: 0 16px 40px rgba(0,0,0,.2);
+}
+
+.research-image-frame .visual-sprite {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 960px) {
+  .project-card.featured {
+    grid-template-columns: 1fr;
+  }
+  .project-card.featured .photo-visual {
+    width: min(calc(100% - 40px), 560px);
+    height: 200px;
+    margin: 22px auto 0;
+    border-right: 1px solid rgba(255,255,255,.08);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+}
+
+@media (max-width: 760px) {
+  .project-card:not(.featured) .photo-visual {
+    height: 155px;
+  }
+  .project-card.featured .photo-visual {
+    height: 170px;
+  }
+  .research-image-frame {
+    height: 155px;
+  }
+}
