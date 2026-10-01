@@ -188,3 +188,26 @@ h3 { font-size: 1.45rem; letter-spacing: -.025em; }
   * { scroll-behavior:auto !important; animation:none !important; transition:none !important; }
   .reveal { opacity:1; transform:none; }
 }
+.photo-visual { margin: 0; background: #050a0f; }
+.photo-visual img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .55s ease, filter .35s ease; }
+.project-card:hover .photo-visual img { transform: scale(1.025); filter: saturate(1.06) contrast(1.02); }
+.photo-visual::after { content: ""; position: absolute; inset: auto 0 0; height: 42%; background: linear-gradient(transparent, rgba(2,7,11,.78)); pointer-events: none; }
+.simulation-gallery-section { padding-top: 92px; background: linear-gradient(180deg, rgba(255,255,255,.018), transparent); }
+.simulation-gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+.gallery-card { grid-column: span 4; margin: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.1); border-radius: 18px; background: rgba(255,255,255,.03); transition: transform .25s ease, border-color .25s ease; }
+.gallery-card:hover { transform: translateY(-4px); border-color: rgba(119,229,255,.28); }
+.gallery-card.gallery-wide { grid-column: span 8; }
+.gallery-card img { width: 100%; aspect-ratio: 16 / 10; display: block; object-fit: contain; background: #05090d; }
+.gallery-card figcaption { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; padding: 15px 17px 16px; border-top: 1px solid rgba(255,255,255,.075); }
+.gallery-card figcaption strong { font-size: .88rem; letter-spacing: -.01em; }
+.gallery-card figcaption span { color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: .66rem; text-align: right; }
+@media (max-width: 960px) {
+  .gallery-card { grid-column: span 6; }
+  .gallery-card.gallery-wide { grid-column: span 12; }
+}
+@media (max-width: 760px) {
+  .simulation-gallery { grid-template-columns: 1fr; }
+  .gallery-card, .gallery-card.gallery-wide { grid-column: 1; }
+  .gallery-card figcaption { align-items:flex-start; flex-direction:column; gap:4px; }
+  .gallery-card figcaption span { text-align:left; }
+}
