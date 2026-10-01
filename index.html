@@ -88,6 +88,7 @@
       </div>
     </section>
 
+
     <section id="projects" class="section">
       <div class="container">
         <div class="section-heading reveal">
@@ -98,34 +99,33 @@
 
         <div class="project-grid">
           <article class="project-card featured reveal">
-            <div class="project-visual sprite-visual sprite-cfd" role="img" aria-label="Reynolds number 10,000 lid-driven cavity velocity field with streamlines"></div>
+            <figure class="project-visual photo-visual">
+              <div class="visual-sprite sprite-cfd" role="img" aria-label="High-resolution CFD cavity-flow contour visualization"></div>
+            </figure>
             <div class="project-body">
-              <div class="project-topline"><span>Graduate Research</span><span>2025–2026</span></div>
-              <h3>GPU-Accelerated Velocity–Impulse Flow Solver</h3>
-              <p>Developed a collocated incompressible flow solver using velocity–impulse variables, Poisson-based recovery, RK time integration, and GPU acceleration. Extended the framework toward high-Reynolds-number cavity-flow stress tests, 3D simulation, and turbulence modeling.</p>
+              <div class="project-topline"><span>Graduate Research</span><span>CFD Solver Development</span></div>
+              <h3>Velocity–Impulse Incompressible Flow Solver</h3>
+              <p>Developing a GPU-accelerated incompressible velocity–impulse solver for canonical cavity-flow problems, pressure recovery, and high-Reynolds-number studies.</p>
               <ul class="clean-list">
-                <li>Python / Numba CUDA implementation with GPU-accelerated kernels.</li>
-                <li>Investigated EL and geometric impulse formulations, projection accuracy, numerical dissipation, and pressure recovery.</li>
-                <li>Validation against canonical lid-driven cavity centerline velocity data.</li>
-                <li>High-Reynolds-number stress testing, including the Re = 10,000 cavity result shown above.</li><li>3D LES / turbulence-model experiments extending toward Re ≈ 100,000.</li>
+                <li>Compared E–Liu and geometric formulations across Reynolds-number cases.</li>
+                <li>Built projection, pressure-recovery, and visualization workflows in Python/CUDA.</li>
+                <li>Extended the framework toward turbulence modeling and 3D simulation.</li>
               </ul>
-              <div class="tech-row"><span>Python</span><span>CUDA</span><span>CFD</span><span>LES</span><span>Numerical Methods</span></div>
+              <div class="tech-row"><span>Python</span><span>Numba CUDA</span><span>Finite Difference</span><span>Projection Methods</span></div>
             </div>
-          
-            <div class="impulse-feature">
-              <div class="sprite-visual sprite-impulse" role="img" aria-label="Geometric and E-Liu impulse formulation contour fields showing scalar potential and impulse components"></div>
-            </div>
-</article>
+          </article>
 
           <article class="project-card reveal">
-            <div class="project-visual sprite-visual sprite-aerospike" role="img" aria-label="Mach contour of a truncated linear aerospike nozzle with center-slot base bleed"></div>
+            <figure class="project-visual photo-visual">
+              <div class="visual-sprite sprite-aero" role="img" aria-label="Aerospike nozzle CAD render with flow visualization"></div>
+            </figure>
             <div class="project-body">
               <div class="project-topline"><span>Capstone</span><span>Propulsion</span></div>
               <h3>Truncated Linear Aerospike Nozzle</h3>
-              <p>Led simulation work for a 3D truncated linear plug nozzle, including truncation and external base-bleed studies, alongside method-of-characteristics design, CAD, FEA, additive manufacturing, and cold-flow testing.</p>
+              <p>Led simulation work for a truncated linear plug nozzle, combining method-of-characteristics design, CAD, FEA, additive manufacturing, and cold-flow testing.</p>
               <ul class="clean-list">
-                <li>Studied full-length and truncated configurations together with base-bleed placement and injection direction.</li>
-                <li>Used ANSYS for flow/structural studies and SolidWorks for mechanical integration.</li>
+                <li>Designed a ~40% truncated spike geometry and supporting structure.</li>
+                <li>Used flow and structural analysis to guide the final concept.</li>
                 <li>Built and tested a 3D-printed prototype.</li>
               </ul>
               <div class="tech-row"><span>ANSYS</span><span>SolidWorks</span><span>MOC</span><span>FEA</span><span>3D Printing</span></div>
@@ -133,7 +133,9 @@
           </article>
 
           <article class="project-card reveal">
-            <div class="project-visual sprite-visual sprite-pump" role="img" aria-label="Side-by-side seven-blade centrifugal pump geometry mesh and velocity contour"></div>
+            <figure class="project-visual photo-visual">
+              <div class="visual-sprite sprite-pump" role="img" aria-label="Centrifugal pump geometry and flow visualization"></div>
+            </figure>
             <div class="project-body">
               <div class="project-topline"><span>Fluid Machinery</span><span>Design Study</span></div>
               <h3>Centrifugal Pump Optimization</h3>
@@ -150,7 +152,6 @@
           <article class="project-card reveal">
             <div class="project-visual chair-visual">
               <div class="chair-frame"></div><div class="wheel w-left"></div><div class="wheel w-right"></div><div class="gesture-wave">⌁⌁⌁</div>
-              <span class="visual-label mono">MECHATRONICS</span>
             </div>
             <div class="project-body">
               <div class="project-topline"><span>Prototype</span><span>Embedded Systems</span></div>
@@ -168,6 +169,33 @@
       </div>
     </section>
 
+    <section class="section simulation-gallery-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">SIMULATION GALLERY</p>
+          <h2>Selected visuals from my CFD and propulsion work.</h2>
+          <p class="section-sub">A curated mix of grounded simulation figures and enhanced presentation visuals extracted from my research and capstone work.</p>
+        </div>
+        <div class="simulation-gallery">
+          <figure class="gallery-card gallery-wide reveal">
+            <div class="visual-sprite sprite-moc" role="img" aria-label="Method-of-characteristics inspired aerospike contour visualization"></div>
+            <figcaption class="gallery-caption"><strong>Aerospike contour study</strong><span>Method-of-characteristics inspired flow visualization</span></figcaption>
+          </figure>
+          <figure class="gallery-card reveal">
+            <div class="visual-sprite sprite-bleed" role="img" aria-label="Aerospike base-bleed contour visualization"></div>
+            <figcaption class="gallery-caption"><strong>Base-bleed flow field</strong><span>Enhanced plug-nozzle visualization</span></figcaption>
+          </figure>
+          <figure class="gallery-card reveal">
+            <div class="visual-sprite sprite-cfd" role="img" aria-label="Impulse formulation contour montage"></div>
+            <figcaption class="gallery-caption"><strong>Impulse formulation contours</strong><span>Pressure and flow-structure comparisons</span></figcaption>
+          </figure>
+          <figure class="gallery-card reveal">
+            <div class="visual-sprite sprite-vortex" role="img" aria-label="Vorticity wake visualization"></div>
+            <figcaption class="gallery-caption"><strong>Wake / vorticity field</strong><span>Grounded high-resolution impulse-section visual</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
     <section id="research" class="section section-dark">
       <div class="container research-grid">
@@ -176,23 +204,27 @@
           <h2>Numerical methods for incompressible flow.</h2>
           <p class="section-sub">Graduate research exploring impulse-based formulations as an alternative representation of incompressible momentum dynamics.</p>
         </div>
-        <div class="research-panel reveal">
-          <div class="equation mono">q = u + ∇φ</div>
-          <div class="equation mono">∇²φ = ∇ · q</div>
-          <div class="equation mono">u = q − ∇φ</div>
-          <div class="research-copy">
-            <h3>Current focus</h3>
-            <p>Velocity–impulse formulations, projection methods, pressure recovery, LES/turbulence modeling, numerical stability, GPU performance, and centerline/field validation for high-Reynolds-number cavity flow.</p>
-            <div class="research-stats">
-              <div><strong>2D → 3D</strong><span>solver extension</span></div>
-              <div><strong>FP32 CUDA</strong><span>GPU acceleration</span></div>
-              <div><strong>Re 10²–10⁵</strong><span>validation range</span></div>
+        <div class="research-stack">
+          <div class="research-panel reveal">
+            <div class="equation mono">q = u + ∇φ</div>
+            <div class="equation mono">∇²φ = ∇ · q</div>
+            <div class="equation mono">u = q − ∇φ</div>
+            <div class="research-copy">
+              <h3>Current focus</h3>
+              <p>Velocity–impulse formulations, projection methods, pressure recovery, LES/turbulence modeling, numerical stability, GPU performance, and centerline/field validation for high-Reynolds-number cavity flow.</p>
+              <div class="research-stats">
+                <div><strong>2D → 3D</strong><span>solver extension</span></div>
+                <div><strong>FP32 CUDA</strong><span>GPU acceleration</span></div>
+                <div><strong>Re 10²–10⁵</strong><span>validation range</span></div>
+              </div>
             </div>
           </div>
+          <figure class="research-image-frame reveal">
+            <div class="visual-sprite sprite-vortex" role="img" aria-label="Impulse section wake visualization"></div>
+          </figure>
         </div>
       </div>
     </section>
-
     <section id="skills" class="section">
       <div class="container">
         <div class="section-heading reveal">
@@ -247,9 +279,9 @@
         <div class="contact-actions">
           <a class="btn primary" href="mailto:YOUR_EMAIL@example.com">Email Me</a>
           <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="btn secondary" href="https://github.com/wwwrushilrajesh-sudo" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn secondary" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
         </div>
-        <p class="contact-note mono">Replace the placeholder email and LinkedIn URL in index.html when ready.</p>
+        <p class="contact-note mono">Replace the placeholder email, LinkedIn, and GitHub links in index.html before publishing.</p>
       </div>
     </section>
   </main>

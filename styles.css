@@ -261,3 +261,64 @@ h3 { font-size: 1.45rem; letter-spacing: -.025em; }
 @media (max-width: 760px) {
   .impulse-feature { padding: 0 18px 20px; }
 }
+
+
+/* Portfolio media system */
+.photo-visual { background: #07131c; display: block; }
+.project-card.featured .photo-visual { min-height: 420px; }
+.project-card:not(.featured) .photo-visual { min-height: 280px; }
+
+.simulation-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.gallery-card {
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255,255,255,.03);
+  box-shadow: var(--shadow);
+  transition: transform .25s ease, border-color .25s ease;
+}
+.gallery-card:hover { transform: translateY(-4px); border-color: rgba(119,229,255,.25); }
+.gallery-card.gallery-wide { grid-column: 1 / -1; }
+.gallery-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 20px 20px;
+  color: #aebbc7;
+}
+.gallery-caption strong { color: var(--text); font-size: .96rem; }
+.gallery-caption span { color: var(--muted); font-size: .85rem; }
+
+.research-stack { display: grid; gap: 22px; }
+.research-image-frame {
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(255,255,255,.025);
+  box-shadow: var(--shadow);
+}
+
+.visual-sprite {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  background-image: url("assets/portfolio-sprite.webp");
+  background-size: 300% 200%;
+  background-repeat: no-repeat;
+  background-color: #07131c;
+}
+.sprite-cfd { background-position: 0% 0%; }
+.sprite-aero { background-position: 50% 0%; }
+.sprite-pump { background-position: 100% 0%; }
+.sprite-moc { background-position: 0% 100%; }
+.sprite-vortex { background-position: 50% 100%; }
+.sprite-bleed { background-position: 100% 100%; }
+
+.project-visual .visual-sprite { min-height: 100%; }
+.gallery-card .visual-sprite { aspect-ratio: 16 / 10; min-height: 0; }
+.gallery-card.gallery-wide .visual-sprite { aspect-ratio: 16 / 8; }
+.research-image-frame .visual-sprite { aspect-ratio: 16 / 10; min-height: 0; }
