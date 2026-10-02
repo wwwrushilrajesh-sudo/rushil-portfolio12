@@ -1,26 +1,39 @@
 # Rushil Rajesh Engineering Portfolio
 
-Responsive static portfolio for CFD, scientific computing, mechanical design, product development, and mechatronics roles.
+Responsive static portfolio for CFD, scientific computing, mechanical design, product development, mechatronics, and thermal-fluid engineering.
 
 ## Velocity–Impulse CFD solver archive
 
-The repository now includes a public archive of major solver-development snapshots in [`solver-versions/`](./solver-versions/).
+The repository includes selected **non-turbulence** development snapshots in [`solver-versions/`](./solver-versions/).
 
 | Version | Status | Description |
 |---|---|---|
 | V1 | Public | 2D E–Liu CPU solver with RK4 + SOR projection |
 | V2 | Public | 2D geometric impulse solver with stretching contribution |
 | V3 | Public | CUDA E–Liu solver with residual-controlled Jacobi projection |
-| V4 | Public | 3D geometric semi-Lagrangian + Smagorinsky SGS CUDA solver |
-| V5 | Public | Performance-focused 3D CUDA LES Fast V3 |
-| V6 | Research / private | E–Liu + k–ω SST + direct DCT projection |
-| V7 | Research / private | Eulerian geometric + k–ω SST + DCT projection |
-| V8 | Research / private | Geometric SST revision 2 |
-| V9 | Research / private | Semi-Lagrangian geometric + k–ω SST |
+| V4 | Private | 3D semi-Lagrangian + SGS research branch |
+| V5 | Private | 3D CUDA LES performance branch |
+| V6 | Private | E–Liu + k–ω SST + direct DCT projection |
+| V7 | Private | Eulerian geometric + k–ω SST + DCT projection |
+| V8 | Private | Geometric SST revision 2 |
+| V9 | Private | Semi-Lagrangian geometric + k–ω SST |
 
-The current k–ω SST research source is intentionally being held until the associated results are published.
+**All turbulence-modeling source code is being withheld from the public repository for now.** The current plan is to release the relevant research branches after publication of the associated results.
 
-[Browse the solver archive](./solver-versions/README.md)
+[Browse the public solver archive](./solver-versions/README.md)
+
+## Portfolio project coverage
+
+The website includes detailed technical writeups for:
+
+- Velocity–Impulse Incompressible Flow Solver
+- Truncated Linear Aerospike Nozzle
+- Centrifugal Pump Impeller Design & CFD
+- EV Moped Battery Pack Thermal Management
+- Gesture-Controlled Wheelchair Prototype
+- Apollo Tyres Tire Health Monitoring
+- Oscillating-Cylinder Lattice Boltzmann Solver
+- Heat-Sink / Fan Optimization
 
 ## Portfolio stack
 
