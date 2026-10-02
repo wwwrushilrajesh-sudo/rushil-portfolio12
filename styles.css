@@ -541,3 +541,20 @@ h3 { font-size: 1.45rem; letter-spacing: -.025em; }
     margin-inline: auto;
   }
 }
+
+/* Ensure research figures always render at their native ratio */
+.research-media-primary .research-media-inner {
+  aspect-ratio: 4 / 3;
+}
+.research-media-secondary .research-media-inner {
+  aspect-ratio: 5 / 4;
+}
+.research-media-card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: #f7f8fa;
+}
