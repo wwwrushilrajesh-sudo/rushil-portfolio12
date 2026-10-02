@@ -935,3 +935,31 @@ a.solver-version-card:hover {
   object-fit: contain !important;
   image-rendering: auto;
 }
+
+/* Prominent research positioning */
+.research-worldfirst {
+  margin: 16px 0 18px;
+  padding: 16px 18px;
+  border: 1px solid rgba(119,229,255,.20);
+  border-left: 3px solid rgba(119,229,255,.72);
+  border-radius: 12px;
+  background:
+    linear-gradient(90deg, rgba(119,229,255,.075), rgba(159,140,255,.035)),
+    rgba(5,15,23,.46);
+  box-shadow: 0 12px 34px rgba(0,0,0,.14);
+}
+.research-worldfirst span {
+  display:block;
+  margin-bottom:7px;
+  color:#75d9ee;
+  font-size:.62rem;
+  letter-spacing:.13em;
+}
+.research-worldfirst strong {
+  display:block;
+  max-width:880px;
+  color:#f2f8fb;
+  font-size:clamp(1rem,2vw,1.42rem);
+  line-height:1.35;
+  font-weight:650;
+}
