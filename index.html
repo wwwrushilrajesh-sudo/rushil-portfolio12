@@ -20,9 +20,9 @@
       </a>
       <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
         <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#contact" class="nav-cta">Contact</a>
@@ -38,8 +38,8 @@
           <h1>I build numerical tools and engineered systems that turn fluid mechanics into <span class="gradient-text">working hardware.</span></h1>
           <p class="hero-lede">M.S. Mechanical Engineering candidate at the University of Cincinnati focused on computational fluid dynamics, GPU-accelerated solver development, turbomachinery, product development, CAD, and mechatronics.</p>
           <div class="hero-actions">
-            <a class="btn primary" href="#research">View Research</a>
-            <a class="btn secondary" href="#projects">View Projects</a>
+            <a class="btn primary" href="#projects">Explore Projects</a>
+            <a class="btn secondary" href="#research">View Research</a>
           </div>
           <div class="hero-metrics">
             <div><strong>GPU CFD</strong><span>CUDA / Python</span></div>
@@ -69,6 +69,206 @@
             </div>
           </div>
           
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-muted">
+      <div class="container split-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">ABOUT ME</p>
+          <h2>I build across simulation, design, computation, and hardware.</h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>I am a mechanical engineer working at the intersection of computational fluid dynamics, numerical methods, and product development. My graduate research centers on an incompressible velocity–impulse formulation for high-Reynolds-number flow, including GPU acceleration, pressure/velocity recovery, turbulence modeling, and validation against canonical cavity-flow data.</p>
+          <p>Beyond solver development, I have worked on turbomachinery, aerospike nozzle design, centrifugal pump optimization, thermal systems, GD&amp;T, machining, CAM/CNC workflows, 3D printing, and mechatronics prototypes.</p>
+          <div class="about-tags">
+            <span>Fluid Mechanics</span><span>Numerical Methods</span><span>GPU Computing</span><span>Product Development</span><span>CAD / CAM</span><span>Mechatronics</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="projects" class="section project-explorer-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">PROJECT EXPLORER</p>
+          <h2>Click into the project you want to explore.</h2>
+          <p class="section-sub">Instead of scrolling through six long cards, choose a project tab and the full engineering story opens below — design question, workflow, analysis, results, tools, and supporting links.</p>
+        </div>
+
+        <div class="project-explorer reveal">
+          <div class="project-tabs" role="tablist" aria-label="Engineering projects">
+            <button class="project-tab active" id="project-tab-aerospike" type="button" role="tab" aria-selected="true" aria-controls="project-panel-aerospike" data-project-tab="aerospike"><span>PROPULSION</span><strong>Aerospike Nozzle</strong></button>
+<button class="project-tab " id="project-tab-impeller" type="button" role="tab" aria-selected="false" aria-controls="project-panel-impeller" data-project-tab="impeller"><span>TURBOMACHINERY</span><strong>Pump Impeller</strong></button>
+<button class="project-tab " id="project-tab-mechatronics" type="button" role="tab" aria-selected="false" aria-controls="project-panel-mechatronics" data-project-tab="mechatronics"><span>ROBOTICS / CONTROLS</span><strong>Mechatronics</strong></button>
+<button class="project-tab " id="project-tab-battery" type="button" role="tab" aria-selected="false" aria-controls="project-panel-battery" data-project-tab="battery"><span>THERMAL-FLUID</span><strong>Battery Thermal</strong></button>
+<button class="project-tab " id="project-tab-lbm" type="button" role="tab" aria-selected="false" aria-controls="project-panel-lbm" data-project-tab="lbm"><span>CUSTOM CFD</span><strong>LBM Solver</strong></button>
+<button class="project-tab " id="project-tab-heatsink" type="button" role="tab" aria-selected="false" aria-controls="project-panel-heatsink" data-project-tab="heatsink"><span>THERMAL DESIGN</span><strong>Heat Sink</strong></button>
+          </div>
+          <div class="project-tab-stage">
+            <article class="project-tab-panel active" role="tabpanel" id="project-panel-aerospike" aria-labelledby="project-tab-aerospike">
+            <figure class="project-visual photo-visual">
+              <div class="visual-sprite sprite-bleed" role="img" aria-label="Truncated aerospike base-bleed contour visualization"></div>
+            </figure>
+            <div class="project-body">
+              <div class="project-topline"><span>Capstone · 2023–2024</span><span>Propulsion</span></div>
+              <h3>Truncated Linear Aerospike Nozzle</h3>
+              <p>Carried an aerospike concept through analytical contour generation, CAD, CFD, structural analysis, additive manufacturing, and cold-flow testing.</p>
+              <ul class="clean-list">
+                <li>Modified a Python Method of Characteristics workflow to generate the linear-plug contour and developed a ~40% truncated design.</li>
+                <li>Used ANSYS Fluent to investigate Mach/pressure behavior, truncation, base pressure, and bleed-slot concepts before prototyping.</li>
+                <li>Used ANSYS FEA to evaluate aerospike-tip deformation and von Mises stress against Ti-6Al-4V material limits.</li>
+                <li>Converted the analytical profile into manufacturable CAD, 3D printed the nozzle, and supported cold-flow testing.</li>
+              </ul>
+              <div class="project-deep-dive">
+                <div><span>Engineering question</span><p>Can a shorter truncated aerospike preserve useful supersonic expansion behavior while remaining practical to manufacture, mount, and test?</p></div>
+                <div><span>Workflow</span><p>MOC contour → SolidWorks geometry → CFD / base-bleed study → structural checks → 3D printing → cold-flow prototype test.</p></div>
+                <div><span>Engineering value</span><p>A full design loop connecting analytical gas dynamics to geometry, simulation, structural decisions, manufacturing, and hardware testing.</p></div>
+              </div>
+              <div class="flagship-summary">
+                <div><strong>~40%</strong><span>truncated plug design</span></div>
+                <div><strong>CFD + FEA</strong><span>flow and structural analysis</span></div>
+                <div><strong>CAD → Test</strong><span>3D printed cold-flow prototype</span></div>
+              </div>
+              <div class="tech-row"><span>Python</span><span>ANSYS Fluent</span><span>SolidWorks</span><span>MOC</span><span>FEA</span><span>3D Printing</span></div>
+              <div class="project-code-callout">
+                <div class="project-code-copy">
+                  <strong>Python contour-generation demo</strong>
+                  <p>A public MOC-based example that converts a target supersonic design condition into a plug contour and exports coordinates for CAD/CFD preprocessing, making rapid geometry iteration possible before rebuilding a full simulation model.</p>
+                </div>
+                <a class="code-download-btn" href="downloads/aerospike_moc_contour.py" download>Download Python Code</a>
+              </div>
+            </div>
+          </article>
+<article class="project-tab-panel " role="tabpanel" id="project-panel-impeller" aria-labelledby="project-tab-impeller">
+            <figure class="project-visual photo-visual">
+              <div class="visual-sprite sprite-pump" role="img" aria-label="Centrifugal pump geometry and flow visualization"></div>
+            </figure>
+            <div class="project-body">
+              <div class="project-topline"><span>Fluid Machinery</span><span>Design + CFD</span></div>
+              <h3>Centrifugal Pump Impeller Design &amp; Blade-Count Study</h3>
+              <p>Combined product-development methods with turbomachinery CFD to study how blade count changes internal flow and pump performance.</p>
+              <ul class="clean-list">
+                <li>Created 5-, 7-, and 9-blade impeller configurations while holding the main geometry and operating requirements controlled.</li>
+                <li>Generated turbomachinery meshes in TurboGrid and used an MRF workflow in ANSYS Fluent.</li>
+                <li>Compared pressure rise/head, blade loading, slip, blockage, passage behavior, and outlet-flow uniformity.</li>
+                <li>Applied datum-based GD&amp;T to shaft/bore alignment, axial faces, and blade/profile features for manufacturability and inspection.</li>
+              </ul>
+              <div class="project-deep-dive">
+                <div><span>Engineering question</span><p>How does increasing blade count trade improved flow guidance and reduced slip against blockage, friction, and altered passage diffusion?</p></div>
+                <div><span>Analysis</span><p>Controlled geometry comparison across 5/7/9 blades using pressure rise, head, blade loading, slip, and outlet uniformity as design metrics.</p></div>
+                <div><span>Design value</span><p>The project tied aerodynamic performance to a manufacturable impeller definition instead of treating CAD and CFD as separate exercises.</p></div>
+              </div>
+              <div class="flagship-summary">
+                <div><strong>5 / 7 / 9</strong><span>blade-count comparison</span></div>
+                <div><strong>CFD + GD&amp;T</strong><span>performance to manufacturability</span></div>
+                <div><strong>MRF</strong><span>rotating-flow analysis</span></div>
+              </div>
+              <div class="tech-row"><span>ANSYS Fluent</span><span>TurboGrid</span><span>MRF</span><span>GD&amp;T</span><span>CAD</span></div>
+            </div>
+          </article>
+<article class="project-tab-panel " role="tabpanel" id="project-panel-mechatronics" aria-labelledby="project-tab-mechatronics">
+            <div class="project-visual chair-visual">
+              <div class="chair-frame"></div><div class="wheel w-left"></div><div class="wheel w-right"></div><div class="gesture-wave">⌁⌁⌁</div>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>Prototype</span><span>Mechatronics</span></div>
+              <h3>Gesture-Controlled Wheelchair Prototype</h3>
+              <p>Developed an end-to-end electromechanical mobility prototype using IMU sensing, wireless communication, embedded control, and differential motor drive.</p>
+              <ul class="clean-list">
+                <li>Programmed an Arduino Nano to read MPU6050 accelerometer/gyroscope data over I2C.</li>
+                <li>Mapped calibrated wrist tilt to forward, reverse, left, right, and stop commands.</li>
+                <li>Used paired nRF24L01 modules for real-time wireless command transmission.</li>
+                <li>Drove two DC motors through an L298N dual H-bridge and tuned thresholds for stable differential steering.</li>
+              </ul>
+              <div class="project-deep-dive">
+                <div><span>System architecture</span><p>Hand-mounted transmitter with IMU + Arduino → wireless link → receiver Arduino → dual H-bridge → two drive motors.</p></div>
+                <div><span>Control challenge</span><p>Calibrate gesture thresholds strongly enough to reject unintended wrist motion while keeping the command response intuitive and responsive.</p></div>
+                <div><span>Engineering value</span><p>Integrated sensing, firmware, communication, motor electronics, and a physical mobility platform into one functioning prototype.</p></div>
+              </div>
+              <div class="flagship-summary">
+                <div><strong>IMU → RF</strong><span>gesture sensing and wireless control</span></div>
+                <div><strong>2 motors</strong><span>differential drive architecture</span></div>
+                <div><strong>Full prototype</strong><span>sensing, firmware, electronics, motion</span></div>
+              </div>
+              <div class="tech-row"><span>Arduino Nano</span><span>MPU6050</span><span>nRF24L01</span><span>L298N</span><span>Motor Control</span></div>
+            </div>
+          </article>
+<article class="project-tab-panel " role="tabpanel" id="project-panel-battery" aria-labelledby="project-tab-battery">
+            <div class="project-visual project-schematic battery-visual" aria-label="Battery thermal-management schematic">
+              <div class="battery-pack"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              <div class="airflow-lines">→ → →</div>
+              <div class="visual-label">THERMAL / AIRFLOW</div>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>2022–2023</span><span>Thermal-Fluid Design</span></div>
+              <h3>EV Moped Battery Pack Thermal Management</h3>
+              <p>Used thermal-fluid simulation to connect vehicle operating speed, forced convection, and battery-holder geometry to pack temperature.</p>
+              <ul class="clean-list">
+                <li>Modeled battery heat generation and estimated pack temperature during stationary/no-drive operation.</li>
+                <li>Applied speed-dependent external airflow to represent vehicle-motion-driven forced convection.</li>
+                <li>Compared temperature fields across operating speeds and identified low-airflow cases as the most thermally demanding.</li>
+                <li>Designed the battery pack/holder around packaging, structural support, and accessible cooling-airflow paths.</li>
+              </ul>
+              <div class="project-deep-dive">
+                <div><span>Engineering question</span><p>How does riding speed change convective cooling, and which operating condition creates the greatest thermal risk for the pack?</p></div>
+                <div><span>Workflow</span><p>Define heat source → build pack/holder geometry → apply airflow cases → compare temperature → use trends to guide cooling decisions.</p></div>
+                <div><span>Engineering value</span><p>Turned a product-level thermal question into boundary conditions, CFD results, and a design-relevant interpretation of hot-spot behavior.</p></div>
+              </div>
+              <div class="tech-row"><span>ANSYS Fluent</span><span>Heat Transfer</span><span>Forced Convection</span><span>CAD</span></div>
+            </div>
+          </article>
+<article class="project-tab-panel " role="tabpanel" id="project-panel-lbm" aria-labelledby="project-tab-lbm">
+            <div class="project-visual project-schematic vortex-visual" aria-label="Oscillating cylinder wake schematic">
+              <div class="cylinder-mark"></div>
+              <div class="wake-line wake-a"></div><div class="wake-line wake-b"></div><div class="wake-line wake-c"></div>
+              <div class="visual-label">UNSTEADY WAKE / LBM</div>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>2023–2024</span><span>Custom CFD</span></div>
+              <h3>Flow Over an Oscillating Cylinder — Lattice Boltzmann</h3>
+              <p>Built custom transient-flow solvers using both single-relaxation-time and multi-relaxation-time lattice Boltzmann collision models.</p>
+              <ul class="clean-list">
+                <li>Implemented SRT and MRT formulations directly in Python/NumPy.</li>
+                <li>Simulated an oscillating bluff body and resolved vortex-shedding/wake evolution.</li>
+                <li>Tracked drag and lift histories to connect force response with the changing wake structure.</li>
+                <li>Used the project to compare collision-model behavior and strengthen custom unsteady-CFD implementation experience.</li>
+              </ul>
+              <div class="project-deep-dive">
+                <div><span>Engineering question</span><p>How do SRT and MRT collision models differ when representing the unsteady wake and aerodynamic force history of an oscillating cylinder?</p></div>
+                <div><span>Workflow</span><p>Build LBM solver → prescribe cylinder motion → resolve transient wake → extract force histories → compare SRT/MRT behavior.</p></div>
+                <div><span>Engineering value</span><p>Demonstrated solver development beyond commercial CFD by implementing the governing numerical method directly and interpreting the resulting wake physics.</p></div>
+              </div>
+              <div class="tech-row"><span>Python</span><span>NumPy</span><span>LBM</span><span>SRT</span><span>MRT</span><span>Unsteady CFD</span></div>
+            </div>
+          </article>
+<article class="project-tab-panel " role="tabpanel" id="project-panel-heatsink" aria-labelledby="project-tab-heatsink">
+            <div class="project-visual project-schematic heatsink-visual" aria-label="Heat sink and fan thermal study schematic">
+              <div class="fan-disc">↻</div>
+              <div class="fin-bank"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              <div class="visual-label">CONDUCTION + FORCED CONVECTION</div>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>Thermal Design</span><span>Simulation + Experiment</span></div>
+              <h3>Heat-Sink / Fan Optimization</h3>
+              <p>Studied the coupled effect of heat-sink geometry and fan operating condition on component temperature using thermal simulation and experimental comparison.</p>
+              <ul class="clean-list">
+                <li>Modeled conduction through the heat-sink body and forced convection produced by fan-driven airflow.</li>
+                <li>Ran parametric studies over fan speed and fin configuration/ratios.</li>
+                <li>Compared candidate designs using temperature response and average thermal performance rather than geometry alone.</li>
+                <li>Compared simulation trends with experimental measurements to identify effective cooling combinations.</li>
+              </ul>
+              <div class="project-deep-dive">
+                <div><span>Engineering question</span><p>Which combination of fin geometry and fan operating point actually reduces temperature once airflow resistance and available surface area are considered together?</p></div>
+                <div><span>Analysis</span><p>Conduction + forced convection → fan-speed sweep → fin-configuration sweep → temperature comparison → experimental trend check.</p></div>
+                <div><span>Engineering value</span><p>Used simulation as a design-space screening tool before committing to hardware changes, while retaining an experimental sanity check.</p></div>
+              </div>
+              <div class="tech-row"><span>ANSYS</span><span>Thermal Analysis</span><span>Forced Convection</span><span>Parametric Study</span><span>Experiment</span></div>
+            </div>
+          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -207,205 +407,6 @@
             <div class="solver-version-card solver-version-private"><span class="solver-vtag">V8 · PRIVATE</span><strong>Geometric SST Revision 2</strong><small>Research revision</small></div>
             <div class="solver-version-card solver-version-private"><span class="solver-vtag">V9 · PRIVATE</span><strong>Semi-Lagrangian Geometric + SST</strong><small>Experimental turbulence branch</small></div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section section-muted">
-      <div class="container split-grid">
-        <div class="section-heading reveal">
-          <p class="eyebrow">ABOUT</p>
-          <h2>Engineering across simulation, design, and computation.</h2>
-        </div>
-        <div class="about-copy reveal">
-          <p>I am a mechanical engineer working at the intersection of computational fluid dynamics, numerical methods, and product development. My graduate research centers on an incompressible velocity–impulse formulation for high-Reynolds-number flow, including GPU acceleration, pressure/velocity recovery, turbulence modeling, and validation against canonical cavity-flow data.</p>
-          <p>Beyond solver development, I have worked on turbomachinery, aerospike nozzle design, centrifugal pump optimization, thermal systems, GD&amp;T, machining, CAM/CNC workflows, 3D printing, and mechatronics prototypes.</p>
-          <div class="about-tags">
-            <span>Fluid Mechanics</span><span>Numerical Methods</span><span>GPU Computing</span><span>Product Development</span><span>CAD / CAM</span><span>Mechatronics</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">FLAGSHIP ENGINEERING WORK</p>
-          <h2>Propulsion, turbomachinery, and mechatronics — treated as core engineering work.</h2>
-          <p class="section-sub">The aerospike nozzle, centrifugal-pump impeller study, and gesture-controlled wheelchair are presented as major design projects with the same visual weight, technical depth, and engineering context.</p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card project-flagship reveal">
-            <figure class="project-visual photo-visual">
-              <div class="visual-sprite sprite-bleed" role="img" aria-label="Truncated aerospike base-bleed contour visualization"></div>
-            </figure>
-            <div class="project-body">
-              <div class="project-topline"><span>Capstone · 2023–2024</span><span>Propulsion</span></div>
-              <h3>Truncated Linear Aerospike Nozzle</h3>
-              <p>Carried an aerospike concept through analytical contour generation, CAD, CFD, structural analysis, additive manufacturing, and cold-flow testing.</p>
-              <ul class="clean-list">
-                <li>Modified a Python Method of Characteristics workflow to generate the linear-plug contour and developed a ~40% truncated design.</li>
-                <li>Used ANSYS Fluent to investigate Mach/pressure behavior, truncation, base pressure, and bleed-slot concepts before prototyping.</li>
-                <li>Used ANSYS FEA to evaluate aerospike-tip deformation and von Mises stress against Ti-6Al-4V material limits.</li>
-                <li>Converted the analytical profile into manufacturable CAD, 3D printed the nozzle, and supported cold-flow testing.</li>
-              </ul>
-              <div class="project-deep-dive">
-                <div><span>Engineering question</span><p>Can a shorter truncated aerospike preserve useful supersonic expansion behavior while remaining practical to manufacture, mount, and test?</p></div>
-                <div><span>Workflow</span><p>MOC contour → SolidWorks geometry → CFD / base-bleed study → structural checks → 3D printing → cold-flow prototype test.</p></div>
-                <div><span>Engineering value</span><p>A full design loop connecting analytical gas dynamics to geometry, simulation, structural decisions, manufacturing, and hardware testing.</p></div>
-              </div>
-              <div class="flagship-summary">
-                <div><strong>~40%</strong><span>truncated plug design</span></div>
-                <div><strong>CFD + FEA</strong><span>flow and structural analysis</span></div>
-                <div><strong>CAD → Test</strong><span>3D printed cold-flow prototype</span></div>
-              </div>
-              <div class="tech-row"><span>Python</span><span>ANSYS Fluent</span><span>SolidWorks</span><span>MOC</span><span>FEA</span><span>3D Printing</span></div>
-              <div class="project-code-callout">
-                <div class="project-code-copy">
-                  <strong>Python contour-generation demo</strong>
-                  <p>A public MOC-based example that converts a target supersonic design condition into a plug contour and exports coordinates for CAD/CFD preprocessing, making rapid geometry iteration possible before rebuilding a full simulation model.</p>
-                </div>
-                <a class="code-download-btn" href="downloads/aerospike_moc_contour.py" download>Download Python Code</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card project-flagship project-flagship-reverse reveal">
-            <figure class="project-visual photo-visual">
-              <div class="visual-sprite sprite-pump" role="img" aria-label="Centrifugal pump geometry and flow visualization"></div>
-            </figure>
-            <div class="project-body">
-              <div class="project-topline"><span>Fluid Machinery</span><span>Design + CFD</span></div>
-              <h3>Centrifugal Pump Impeller Design &amp; Blade-Count Study</h3>
-              <p>Combined product-development methods with turbomachinery CFD to study how blade count changes internal flow and pump performance.</p>
-              <ul class="clean-list">
-                <li>Created 5-, 7-, and 9-blade impeller configurations while holding the main geometry and operating requirements controlled.</li>
-                <li>Generated turbomachinery meshes in TurboGrid and used an MRF workflow in ANSYS Fluent.</li>
-                <li>Compared pressure rise/head, blade loading, slip, blockage, passage behavior, and outlet-flow uniformity.</li>
-                <li>Applied datum-based GD&amp;T to shaft/bore alignment, axial faces, and blade/profile features for manufacturability and inspection.</li>
-              </ul>
-              <div class="project-deep-dive">
-                <div><span>Engineering question</span><p>How does increasing blade count trade improved flow guidance and reduced slip against blockage, friction, and altered passage diffusion?</p></div>
-                <div><span>Analysis</span><p>Controlled geometry comparison across 5/7/9 blades using pressure rise, head, blade loading, slip, and outlet uniformity as design metrics.</p></div>
-                <div><span>Design value</span><p>The project tied aerodynamic performance to a manufacturable impeller definition instead of treating CAD and CFD as separate exercises.</p></div>
-              </div>
-              <div class="flagship-summary">
-                <div><strong>5 / 7 / 9</strong><span>blade-count comparison</span></div>
-                <div><strong>CFD + GD&amp;T</strong><span>performance to manufacturability</span></div>
-                <div><strong>MRF</strong><span>rotating-flow analysis</span></div>
-              </div>
-              <div class="tech-row"><span>ANSYS Fluent</span><span>TurboGrid</span><span>MRF</span><span>GD&amp;T</span><span>CAD</span></div>
-            </div>
-          </article>
-
-          <article class="project-card project-flagship reveal">
-            <div class="project-visual chair-visual">
-              <div class="chair-frame"></div><div class="wheel w-left"></div><div class="wheel w-right"></div><div class="gesture-wave">⌁⌁⌁</div>
-            </div>
-            <div class="project-body">
-              <div class="project-topline"><span>Prototype</span><span>Mechatronics</span></div>
-              <h3>Gesture-Controlled Wheelchair Prototype</h3>
-              <p>Developed an end-to-end electromechanical mobility prototype using IMU sensing, wireless communication, embedded control, and differential motor drive.</p>
-              <ul class="clean-list">
-                <li>Programmed an Arduino Nano to read MPU6050 accelerometer/gyroscope data over I2C.</li>
-                <li>Mapped calibrated wrist tilt to forward, reverse, left, right, and stop commands.</li>
-                <li>Used paired nRF24L01 modules for real-time wireless command transmission.</li>
-                <li>Drove two DC motors through an L298N dual H-bridge and tuned thresholds for stable differential steering.</li>
-              </ul>
-              <div class="project-deep-dive">
-                <div><span>System architecture</span><p>Hand-mounted transmitter with IMU + Arduino → wireless link → receiver Arduino → dual H-bridge → two drive motors.</p></div>
-                <div><span>Control challenge</span><p>Calibrate gesture thresholds strongly enough to reject unintended wrist motion while keeping the command response intuitive and responsive.</p></div>
-                <div><span>Engineering value</span><p>Integrated sensing, firmware, communication, motor electronics, and a physical mobility platform into one functioning prototype.</p></div>
-              </div>
-              <div class="flagship-summary">
-                <div><strong>IMU → RF</strong><span>gesture sensing and wireless control</span></div>
-                <div><strong>2 motors</strong><span>differential drive architecture</span></div>
-                <div><strong>Full prototype</strong><span>sensing, firmware, electronics, motion</span></div>
-              </div>
-              <div class="tech-row"><span>Arduino Nano</span><span>MPU6050</span><span>nRF24L01</span><span>L298N</span><span>Motor Control</span></div>
-            </div>
-          </article>
-
-          <div class="project-tier-heading reveal"><span class="mono">ADDITIONAL ENGINEERING WORK</span><p>Thermal-fluid and custom-CFD projects that broaden the portfolio beyond the three flagship design projects.</p></div>
-
-          <article class="project-card reveal">
-            <div class="project-visual project-schematic battery-visual" aria-label="Battery thermal-management schematic">
-              <div class="battery-pack"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="airflow-lines">→ → →</div>
-              <div class="visual-label">THERMAL / AIRFLOW</div>
-            </div>
-            <div class="project-body">
-              <div class="project-topline"><span>2022–2023</span><span>Thermal-Fluid Design</span></div>
-              <h3>EV Moped Battery Pack Thermal Management</h3>
-              <p>Used thermal-fluid simulation to connect vehicle operating speed, forced convection, and battery-holder geometry to pack temperature.</p>
-              <ul class="clean-list">
-                <li>Modeled battery heat generation and estimated pack temperature during stationary/no-drive operation.</li>
-                <li>Applied speed-dependent external airflow to represent vehicle-motion-driven forced convection.</li>
-                <li>Compared temperature fields across operating speeds and identified low-airflow cases as the most thermally demanding.</li>
-                <li>Designed the battery pack/holder around packaging, structural support, and accessible cooling-airflow paths.</li>
-              </ul>
-              <div class="project-deep-dive">
-                <div><span>Engineering question</span><p>How does riding speed change convective cooling, and which operating condition creates the greatest thermal risk for the pack?</p></div>
-                <div><span>Workflow</span><p>Define heat source → build pack/holder geometry → apply airflow cases → compare temperature → use trends to guide cooling decisions.</p></div>
-                <div><span>Engineering value</span><p>Turned a product-level thermal question into boundary conditions, CFD results, and a design-relevant interpretation of hot-spot behavior.</p></div>
-              </div>
-              <div class="tech-row"><span>ANSYS Fluent</span><span>Heat Transfer</span><span>Forced Convection</span><span>CAD</span></div>
-            </div>
-          </article>
-
-          
-
-          <article class="project-card reveal">
-            <div class="project-visual project-schematic vortex-visual" aria-label="Oscillating cylinder wake schematic">
-              <div class="cylinder-mark"></div>
-              <div class="wake-line wake-a"></div><div class="wake-line wake-b"></div><div class="wake-line wake-c"></div>
-              <div class="visual-label">UNSTEADY WAKE / LBM</div>
-            </div>
-            <div class="project-body">
-              <div class="project-topline"><span>2023–2024</span><span>Custom CFD</span></div>
-              <h3>Flow Over an Oscillating Cylinder — Lattice Boltzmann</h3>
-              <p>Built custom transient-flow solvers using both single-relaxation-time and multi-relaxation-time lattice Boltzmann collision models.</p>
-              <ul class="clean-list">
-                <li>Implemented SRT and MRT formulations directly in Python/NumPy.</li>
-                <li>Simulated an oscillating bluff body and resolved vortex-shedding/wake evolution.</li>
-                <li>Tracked drag and lift histories to connect force response with the changing wake structure.</li>
-                <li>Used the project to compare collision-model behavior and strengthen custom unsteady-CFD implementation experience.</li>
-              </ul>
-              <div class="project-deep-dive">
-                <div><span>Engineering question</span><p>How do SRT and MRT collision models differ when representing the unsteady wake and aerodynamic force history of an oscillating cylinder?</p></div>
-                <div><span>Workflow</span><p>Build LBM solver → prescribe cylinder motion → resolve transient wake → extract force histories → compare SRT/MRT behavior.</p></div>
-                <div><span>Engineering value</span><p>Demonstrated solver development beyond commercial CFD by implementing the governing numerical method directly and interpreting the resulting wake physics.</p></div>
-              </div>
-              <div class="tech-row"><span>Python</span><span>NumPy</span><span>LBM</span><span>SRT</span><span>MRT</span><span>Unsteady CFD</span></div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-visual project-schematic heatsink-visual" aria-label="Heat sink and fan thermal study schematic">
-              <div class="fan-disc">↻</div>
-              <div class="fin-bank"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="visual-label">CONDUCTION + FORCED CONVECTION</div>
-            </div>
-            <div class="project-body">
-              <div class="project-topline"><span>Thermal Design</span><span>Simulation + Experiment</span></div>
-              <h3>Heat-Sink / Fan Optimization</h3>
-              <p>Studied the coupled effect of heat-sink geometry and fan operating condition on component temperature using thermal simulation and experimental comparison.</p>
-              <ul class="clean-list">
-                <li>Modeled conduction through the heat-sink body and forced convection produced by fan-driven airflow.</li>
-                <li>Ran parametric studies over fan speed and fin configuration/ratios.</li>
-                <li>Compared candidate designs using temperature response and average thermal performance rather than geometry alone.</li>
-                <li>Compared simulation trends with experimental measurements to identify effective cooling combinations.</li>
-              </ul>
-              <div class="project-deep-dive">
-                <div><span>Engineering question</span><p>Which combination of fin geometry and fan operating point actually reduces temperature once airflow resistance and available surface area are considered together?</p></div>
-                <div><span>Analysis</span><p>Conduction + forced convection → fan-speed sweep → fin-configuration sweep → temperature comparison → experimental trend check.</p></div>
-                <div><span>Engineering value</span><p>Used simulation as a design-space screening tool before committing to hardware changes, while retaining an experimental sanity check.</p></div>
-              </div>
-              <div class="tech-row"><span>ANSYS</span><span>Thermal Analysis</span><span>Forced Convection</span><span>Parametric Study</span><span>Experiment</span></div>
-            </div>
-          </article>
         </div>
       </div>
     </section>
