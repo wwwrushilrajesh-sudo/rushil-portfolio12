@@ -904,3 +904,24 @@ a.solver-version-card:hover {
 .research-media-wide img {
   aspect-ratio: auto !important;
 }
+
+/* Full-resolution research figures */
+.research-media-row {
+  grid-column: 1 / -1;
+}
+.research-media-row .research-media-inner {
+  aspect-ratio: auto !important;
+  background: #fff !important;
+}
+.research-media-row img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+}
+.research-media-link {
+  display: block;
+  cursor: zoom-in;
+}
+.research-media-link:hover img {
+  opacity: .96;
+}
