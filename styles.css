@@ -864,3 +864,16 @@ a.solver-version-card:hover {
 @media (max-width: 760px) {
   .formulation-equations { grid-template-columns:1fr; }
 }
+
+/* Added research velocity-magnitude result */
+.research-media-wide {
+  grid-column: 1 / -1;
+}
+.research-media-wide .research-media-inner {
+  width: min(100%, 560px);
+  aspect-ratio: 534 / 536;
+  margin-inline: auto;
+}
+.research-media-wide figcaption {
+  text-align: center;
+}
