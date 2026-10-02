@@ -1,0 +1,32 @@
+name: Install uploaded research GIF
+
+on:
+  push:
+    paths:
+      - ".gif-upload/trigger.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Rebuild GIF from staged chunks
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .gif-upload/chunk_*.txt | tr -d '\n\r' | base64 --decode > assets/research-velocity-animation.gif
+          file assets/research-velocity-animation.gif
+          sed -i -E 's/research-velocity-animation\.gif\?v=[0-9]+/research-velocity-animation.gif?v=8/g' index.html
+          sed -i 's/Animated velocity magnitude — 68 frames, 534 × 536/Animated square-block velocity field — 35 frames, 420 × 420/g' index.html
+          git rm -r .gif-upload
+          git add assets/research-velocity-animation.gif index.html
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Install uploaded square-block research GIF"
+          git push
