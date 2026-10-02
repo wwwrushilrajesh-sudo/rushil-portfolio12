@@ -925,3 +925,13 @@ a.solver-version-card:hover {
 .research-media-link:hover img {
   opacity: .96;
 }
+
+/* Animated CFD research result */
+.research-media-wide img[src*="research-velocity-animation.gif"] {
+  width: 100% !important;
+  max-width: 534px !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  image-rendering: auto;
+}
