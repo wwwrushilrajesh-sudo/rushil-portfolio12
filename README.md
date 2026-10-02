@@ -31,7 +31,6 @@ The website includes detailed technical writeups for:
 - Centrifugal Pump Impeller Design & CFD
 - EV Moped Battery Pack Thermal Management
 - Gesture-Controlled Wheelchair Prototype
-- Apollo Tyres Tire Health Monitoring
 - Oscillating-Cylinder Lattice Boltzmann Solver
 - Heat-Sink / Fan Optimization
 

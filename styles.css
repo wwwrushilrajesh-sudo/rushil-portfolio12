@@ -811,11 +811,6 @@ a.solver-version-card:hover {
 .battery-pack { display:grid;grid-template-columns:repeat(3,34px);gap:8px;padding:16px;border:1px solid rgba(119,229,255,.28);border-radius:12px; }
 .battery-pack span { width:34px;height:52px;border-radius:7px;background:linear-gradient(180deg,rgba(119,229,255,.28),rgba(119,229,255,.05));border:1px solid rgba(255,255,255,.12); }
 .airflow-lines { margin-left:18px;color:rgba(119,229,255,.58);font-family:'JetBrains Mono',monospace;letter-spacing:.18em; }
-.tire-visual { background:radial-gradient(circle at 38% 48%,rgba(159,140,255,.10),transparent 33%),#08131c; }
-.tire-ring { width:116px;height:116px;border:16px solid rgba(220,230,238,.22);border-radius:50%;box-shadow:inset 0 0 0 2px rgba(119,229,255,.22),0 0 0 2px rgba(255,255,255,.04); }
-.signal-lines { display:flex;align-items:flex-end;gap:5px;height:70px;margin-left:28px; }
-.signal-lines span { width:7px;border-radius:4px 4px 0 0;background:rgba(119,229,255,.4); }
-.signal-lines span:nth-child(1){height:24px}.signal-lines span:nth-child(2){height:52px}.signal-lines span:nth-child(3){height:38px}.signal-lines span:nth-child(4){height:64px}
 .vortex-visual { background:linear-gradient(135deg,#07131c,#0b1822); }
 .cylinder-mark { width:54px;height:54px;border-radius:50%;background:rgba(220,230,238,.16);border:2px solid rgba(255,255,255,.18);margin-left:-80px; }
 .wake-line { position:absolute;width:88px;height:38px;border:2px solid rgba(119,229,255,.28);border-left-color:transparent;border-radius:50%; }
