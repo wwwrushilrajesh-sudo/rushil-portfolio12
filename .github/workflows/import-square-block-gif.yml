@@ -1,0 +1,30 @@
+name: Import square block GIF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/import-square-block-gif.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-gif:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download animation source
+        run: |
+          curl -L --fail --retry 3 -o /tmp/square_block_velocity.mp4 'https://storage.googleapis.com/vidiq-user-videos/d3f98e80-39c3-45e5-b91f-358932770d5f/01745d63-4304-4c6d-a480-e1ba45fbb1ba.mp4?GoogleAccessId=ai-proxy-20261001%40studious-pen-429.vid.io.iam.gserviceaccount.com&Expires=1791563740&Signature=oXRV%2FlHU%2BaZXshVGgeSkOTBgofGhlKmLKVwSO%2Fvd3Xp%2FNQXIGcpnXWSxqGi5Va6SAISqOvqB4QRbm%2FTvZs7eqN3ts0w4cBrgGMDtmW1M0kgXwwNRC4yYKX88NqHmLtaB4OcH4ETqGvjrbwNdQkiimynbsoEyeIj255aC5N4VWGFWDYzA0MNgmOi7Wb865JeYcvg932RvwJzLKndOl7OnqsIUQGY3rIAranL2rPJAx4O0PK4Edi%2BA2ABUlWFAUe%2F6445lQOZXRzhUUgA1jfH8i6Wn5yXNhVLZsx3Y9Hj%2Fu6dIEys6hejKDNBrJ942E14uTe3f%2FVlkHI7VzqMk9mKzCg%3D%3D'
+      - name: Convert to looping GIF
+        run: |
+          ffmpeg -y -i /tmp/square_block_velocity.mp4 -vf "fps=8,scale=420:420:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=128[p];[s1][p]paletteuse=dither=sierra2_4a" assets/square-block-velocity.gif
+      - name: Commit GIF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/square-block-velocity.gif
+          git commit -m "Add square block velocity animation" || exit 0
+          git push
