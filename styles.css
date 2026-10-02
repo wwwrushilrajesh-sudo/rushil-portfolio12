@@ -503,7 +503,7 @@ h3 { font-size: 1.45rem; letter-spacing: -.025em; }
 .research-media-inner {
   overflow: hidden;
   border-radius: 12px;
-  background: #f7f8fa;
+  background: #06111a;
   border: 1px solid rgba(255,255,255,.06);
 }
 
@@ -556,7 +556,7 @@ h3 { font-size: 1.45rem; letter-spacing: -.025em; }
   object-position: center !important;
   opacity: 1 !important;
   visibility: visible !important;
-  background: #f7f8fa;
+  background: #06111a;
 }
 
 .project-code-callout {
