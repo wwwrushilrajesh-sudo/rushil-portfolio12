@@ -22,11 +22,10 @@ The repository includes selected **non-turbulence** development snapshots in [`s
 
 [Browse the public solver archive](./solver-versions/README.md)
 
-## Portfolio project coverage
+## Portfolio coverage
 
-The website includes detailed technical writeups for:
+The website presents the Velocity–Impulse CFD solver as a dedicated research section, with separate detailed project writeups for:
 
-- Velocity–Impulse Incompressible Flow Solver
 - Truncated Linear Aerospike Nozzle
 - Centrifugal Pump Impeller Design & CFD
 - EV Moped Battery Pack Thermal Management

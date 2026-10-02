@@ -130,61 +130,10 @@
         <div class="section-heading reveal">
           <p class="eyebrow">FEATURED WORK</p>
           <h2>Engineering projects, with the technical story included.</h2>
-          <p class="section-sub">Solver development, propulsion, turbomachinery, thermal design, mechatronics, predictive analytics, and custom CFD — with the engineering question, workflow, and design value shown for each project.</p>
+          <p class="section-sub">Propulsion, turbomachinery, thermal design, mechatronics, and custom CFD — with the engineering question, workflow, and design value shown for each project.</p>
         </div>
 
         <div class="project-grid">
-          <article class="project-card featured reveal">
-            <figure class="project-visual photo-visual">
-              <div class="visual-sprite sprite-cfd" role="img" aria-label="High-resolution CFD cavity-flow contour visualization"></div>
-            </figure>
-            <div class="project-body">
-              <div class="project-topline"><span>Graduate Research</span><span>CFD Solver Development</span></div>
-              <h3>Velocity–Impulse Incompressible Flow Solver</h3>
-              <p>Developing an in-house incompressible CFD framework to compare E–Liu impulse-density and geometric impulse formulations under a common numerical architecture, with emphasis on projection methods, stability, validation, and GPU acceleration.</p>
-              <ul class="clean-list">
-                <li>Implemented advection, diffusion, scalar-potential/Poisson coupling, face-consistent velocity recovery, and RK4 projection at intermediate stages.</li>
-                <li>Compared formulation behavior through lid-driven-cavity and Taylor–Green benchmarks, grid refinement, convergence metrics, and long-time stability studies.</li>
-                <li>Progressed the code from CPU SOR baselines to CUDA projection solvers and higher-resolution 2D/3D research branches.</li>
-                <li>Current turbulence-modeling branches are intentionally private until the associated research results are published.</li>
-              </ul>
-              <div class="project-deep-dive">
-                <div><span>Engineering question</span><p>How do mathematically related velocity–impulse formulations differ in numerical stability, grid sensitivity, and benchmark accuracy when implemented in the same incompressible-flow framework?</p></div>
-                <div><span>Numerical workflow</span><p>Advance impulse variables → solve the scalar-potential constraint → recover divergence-free velocity → evaluate the next RK stage → monitor residuals, divergence, and steady-state behavior.</p></div>
-                <div><span>Verification &amp; validation</span><p>Ghia centerline comparisons, 128²/256²/512² mesh studies, Taylor–Green analytical validation, CFL control, Poisson residual tracking, and performance profiling.</p></div>
-              </div>
-              <div class="tech-row"><span>Python</span><span>Numba CUDA</span><span>RK4</span><span>Finite Difference</span><span>Projection Methods</span></div>
-
-              <div class="solver-version-block">
-                <div class="solver-version-head">
-                  <div>
-                    <span class="mono solver-version-kicker">SOLVER ARCHIVE</span>
-                    <h4>Development versions</h4>
-                  </div>
-                  <a class="solver-archive-link" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/tree/main/solver-versions" target="_blank" rel="noopener">Browse archive ↗</a>
-                </div>
-                <p class="solver-version-intro">Only non-turbulence solver snapshots are public for now. All LES, SGS, and k–ω SST source branches are withheld until publication.</p>
-                <div class="solver-version-grid">
-                  <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/blob/main/solver-versions/01_el_cpu_sor.py" target="_blank" rel="noopener">
-                    <span class="solver-vtag">V1 · PUBLIC</span><strong>E–Liu CPU + SOR</strong><small>2D baseline · RK4 · iterative projection</small>
-                  </a>
-                  <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/blob/main/solver-versions/02_geometric_cpu_sor.py" target="_blank" rel="noopener">
-                    <span class="solver-vtag">V2 · PUBLIC</span><strong>Geometric CPU + SOR</strong><small>2D formulation comparison · stretching term</small>
-                  </a>
-                  <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/blob/main/solver-versions/03_el_cuda_jacobi.py" target="_blank" rel="noopener">
-                    <span class="solver-vtag">V3 · PUBLIC</span><strong>E–Liu CUDA + Jacobi</strong><small>GPU projection · residual-controlled Poisson solve</small>
-                  </a>
-                  <div class="solver-version-card solver-version-private"><span class="solver-vtag">V4 · PRIVATE</span><strong>3D Semi-Lagrangian + SGS</strong><small>Turbulence research source withheld</small></div>
-                  <div class="solver-version-card solver-version-private"><span class="solver-vtag">V5 · PRIVATE</span><strong>3D CUDA LES Fast V3</strong><small>Turbulence research source withheld</small></div>
-                  <div class="solver-version-card solver-version-private"><span class="solver-vtag">V6 · PRIVATE</span><strong>E–Liu + k–ω SST + DCT</strong><small>Current turbulence branch</small></div>
-                  <div class="solver-version-card solver-version-private"><span class="solver-vtag">V7 · PRIVATE</span><strong>Geometric + k–ω SST + DCT</strong><small>Eulerian geometric turbulence branch</small></div>
-                  <div class="solver-version-card solver-version-private"><span class="solver-vtag">V8 · PRIVATE</span><strong>Geometric SST Revision 2</strong><small>Research revision</small></div>
-                  <div class="solver-version-card solver-version-private"><span class="solver-vtag">V9 · PRIVATE</span><strong>Semi-Lagrangian Geometric + SST</strong><small>Experimental turbulence branch</small></div>
-                </div>
-              </div>
-            </div>
-          </article>
-
           <article class="project-card reveal">
             <figure class="project-visual photo-visual">
               <div class="visual-sprite sprite-bleed" role="img" aria-label="Truncated aerospike base-bleed contour visualization"></div>
@@ -342,14 +291,15 @@
     <section id="research" class="section section-dark">
       <div class="container research-grid">
         <div class="section-heading reveal">
-          <p class="eyebrow">RESEARCH</p>
-          <h2>Numerical methods for incompressible flow.</h2>
+          <p class="eyebrow">GRADUATE RESEARCH · CFD SOLVER DEVELOPMENT</p>
+          <h2>Velocity–Impulse Incompressible Flow Solver</h2>
           <div class="research-worldfirst">
             <span class="mono">WORLD-FIRST RESEARCH TARGET</span>
             <strong>Developing what is intended to be the world’s first turbulence-capable velocity–impulse CFD solver.</strong>
           </div>
-          <p class="section-sub">Graduate research exploring impulse-based formulations as an alternative representation of incompressible momentum dynamics.</p>
+          <p class="section-sub">An in-house CFD research framework for comparing E–Liu and geometric impulse formulations under a common numerical architecture, with emphasis on projection methods, stability, validation, GPU acceleration, high-Reynolds-number modeling, and ML-assisted projection.</p>
         </div>
+
         <div class="research-stack">
           <div class="research-panel reveal">
             <div class="formulation-equations">
@@ -364,6 +314,7 @@
                 <p>The impulse itself is transported and coupled to the velocity-gradient tensor through the geometric stretching term.</p>
               </div>
             </div>
+
             <div class="research-copy">
               <h3>Current focus</h3>
               <p>Velocity–impulse formulations, projection methods, pressure recovery, numerical stability, and GPU performance, with a turbulence-model-friendly solver architecture for high-Reynolds-number research. Current development also explores an offline-trained neural-network φ predictor that can provide a fast initial guess for the scalar-potential projection before the classical Poisson solver performs the final physics-enforcing correction. Turbulence-modeling source remains private until the associated results are published.</p>
@@ -375,17 +326,76 @@
               </div>
             </div>
           </div>
-          <div class="research-visual-grid reveal">
-            <figure class="research-media-card research-media-secondary">
-              <div class="research-media-inner">
-                <img src="assets/research-square.webp" alt="Flow over square vorticity wake visualization" loading="lazy">
+
+          <div class="research-solver-detail reveal">
+            <div class="research-detail-head">
+              <span class="mono research-vv-kicker">SOLVER DEVELOPMENT</span>
+              <h3>From thesis formulation to a research-grade GPU CFD codebase.</h3>
+            </div>
+            <p class="research-detail-intro">The solver evolved from controlled 2D formulation studies into CUDA-accelerated and 3D research branches while preserving a common projection/recovery framework for meaningful side-by-side comparisons.</p>
+
+            <ul class="clean-list research-clean-list">
+              <li>Implemented advection, diffusion, scalar-potential/Poisson coupling, face-consistent velocity recovery, and RK4 projection at intermediate stages.</li>
+              <li>Compared formulation behavior through lid-driven-cavity and Taylor–Green benchmarks, grid refinement, convergence metrics, and long-time stability studies.</li>
+              <li>Progressed the code from CPU SOR baselines to CUDA projection solvers and higher-resolution 2D/3D research branches.</li>
+              <li>Current turbulence-modeling branches are intentionally private until the associated research results are published.</li>
+            </ul>
+
+            <div class="project-deep-dive research-deep-dive">
+              <div><span>Engineering question</span><p>How do mathematically related velocity–impulse formulations differ in numerical stability, grid sensitivity, and benchmark accuracy when implemented in the same incompressible-flow framework?</p></div>
+              <div><span>Numerical workflow</span><p>Advance impulse variables → solve the scalar-potential constraint → recover divergence-free velocity → evaluate the next RK stage → monitor residuals, divergence, and steady-state behavior.</p></div>
+              <div><span>Verification &amp; validation</span><p>Ghia centerline comparisons, 128²/256²/512² mesh studies, Taylor–Green analytical validation, CFL control, Poisson residual tracking, and performance profiling.</p></div>
+            </div>
+
+            <div class="tech-row research-tech-row"><span>Python</span><span>Numba CUDA</span><span>RK4</span><span>Finite Difference</span><span>Projection Methods</span><span>k–ω SST Research</span><span>Neural φ</span></div>
+          </div>
+
+          <div class="research-vv reveal">
+            <div class="research-vv-head">
+              <div>
+                <span class="mono research-vv-kicker">VERIFICATION &amp; VALIDATION</span>
+                <h3>Validation is built into the thesis workflow.</h3>
               </div>
-              <figcaption>Flow over square wake field</figcaption>
-            </figure>
-            <figure class="research-media-card research-media-wide">
-              <a class="research-media-link" href="assets/square-block-velocity.gif?v=8" target="_blank" rel="noopener" aria-label="Open animated velocity magnitude CFD result">
+              <span class="research-vv-badge">Research-grade V&amp;V</span>
+            </div>
+            <p class="research-vv-intro">The solver is assessed with reference data, analytical solutions, mesh refinement, convergence controls, and computational-performance studies rather than contour plots alone.</p>
+            <div class="research-vv-grid">
+              <div class="research-vv-card"><strong>Ghia cavity benchmark</strong><span>Centerline velocity comparisons for lid-driven-cavity cases at Re = 100, 500, and 1000.</span></div>
+              <div class="research-vv-card"><strong>Grid-refinement study</strong><span>128², 256², and 512² grids used to track error reduction and mesh sensitivity.</span></div>
+              <div class="research-vv-card"><strong>Taylor–Green vortex</strong><span>Periodic analytical benchmark used to examine velocity-decay accuracy and long-time error behavior.</span></div>
+              <div class="research-vv-card"><strong>Projection convergence</strong><span>Scalar-potential residual tolerance, divergence monitoring, and projection at every RK4 stage.</span></div>
+              <div class="research-vv-card"><strong>Time-step control</strong><span>Reported simulations maintain CFL below 0.5 to support stable temporal integration.</span></div>
+              <div class="research-vv-card"><strong>Performance analysis</strong><span>Numba/CUDA acceleration and Poisson-solver implementation studied as part of the computational methodology.</span></div>
+            </div>
+          </div>
+
+          <div class="solver-version-block research-solver-archive reveal">
+            <div class="solver-version-head">
+              <div>
+                <span class="mono solver-version-kicker">SOLVER ARCHIVE</span>
+                <h4>Development versions</h4>
+              </div>
+              <a class="solver-archive-link" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/tree/main/solver-versions" target="_blank" rel="noopener">Browse archive ↗</a>
+            </div>
+            <p class="solver-version-intro">Only non-turbulence solver snapshots are public for now. All LES, SGS, and k–ω SST source branches are withheld until publication.</p>
+            <div class="solver-version-grid">
+              <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/blob/main/solver-versions/01_el_cpu_sor.py" target="_blank" rel="noopener"><span class="solver-vtag">V1 · PUBLIC</span><strong>E–Liu CPU + SOR</strong><small>2D baseline · RK4 · iterative projection</small></a>
+              <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/blob/main/solver-versions/02_geometric_cpu_sor.py" target="_blank" rel="noopener"><span class="solver-vtag">V2 · PUBLIC</span><strong>Geometric CPU + SOR</strong><small>2D formulation comparison · stretching term</small></a>
+              <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/blob/main/solver-versions/03_el_cuda_jacobi.py" target="_blank" rel="noopener"><span class="solver-vtag">V3 · PUBLIC</span><strong>E–Liu CUDA + Jacobi</strong><small>GPU projection · residual-controlled Poisson solve</small></a>
+              <div class="solver-version-card solver-version-private"><span class="solver-vtag">V4 · PRIVATE</span><strong>3D Semi-Lagrangian + SGS</strong><small>Turbulence research source withheld</small></div>
+              <div class="solver-version-card solver-version-private"><span class="solver-vtag">V5 · PRIVATE</span><strong>3D CUDA LES Fast V3</strong><small>Turbulence research source withheld</small></div>
+              <div class="solver-version-card solver-version-private"><span class="solver-vtag">V6 · PRIVATE</span><strong>E–Liu + k–ω SST + DCT</strong><small>Current turbulence branch</small></div>
+              <div class="solver-version-card solver-version-private"><span class="solver-vtag">V7 · PRIVATE</span><strong>Geometric + k–ω SST + DCT</strong><small>Eulerian geometric turbulence branch</small></div>
+              <div class="solver-version-card solver-version-private"><span class="solver-vtag">V8 · PRIVATE</span><strong>Geometric SST Revision 2</strong><small>Research revision</small></div>
+              <div class="solver-version-card solver-version-private"><span class="solver-vtag">V9 · PRIVATE</span><strong>Semi-Lagrangian Geometric + SST</strong><small>Experimental turbulence branch</small></div>
+            </div>
+          </div>
+
+          <div class="research-visual-grid research-visual-single reveal">
+            <figure class="research-media-card research-media-wide research-animation-card">
+              <a class="research-media-link" href="assets/square-block-velocity.gif?v=9" target="_blank" rel="noopener" aria-label="Open animated velocity magnitude CFD result">
                 <div class="research-media-inner">
-                  <img src="assets/square-block-velocity.gif?v=8" alt="Animated velocity magnitude field for 2D flow over a square block" loading="lazy">
+                  <img src="assets/square-block-velocity.gif?v=9" alt="Animated velocity magnitude field for 2D flow over a square block" loading="lazy">
                 </div>
               </a>
               <figcaption>Animated velocity magnitude — 2D square-block wake · click to open</figcaption>

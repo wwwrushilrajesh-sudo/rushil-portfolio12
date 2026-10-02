@@ -963,3 +963,51 @@ a.solver-version-card:hover {
   line-height:1.35;
   font-weight:650;
 }
+
+/* Consolidated solver research section */
+.research-solver-detail {
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,.085);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,.028), rgba(255,255,255,.017));
+}
+.research-detail-head h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+.research-detail-intro {
+  max-width: 900px;
+  margin: 10px 0 14px;
+  color: #8799aa;
+  font-size: .82rem;
+  line-height: 1.58;
+}
+.research-clean-list {
+  margin-top: 12px;
+}
+.research-deep-dive {
+  margin-top: 18px;
+}
+.research-tech-row {
+  margin-top: 16px;
+}
+.research-solver-archive {
+  margin-top: 0;
+}
+.research-visual-single {
+  display: block !important;
+}
+.research-animation-card {
+  width: 100%;
+}
+.research-animation-card .research-media-inner {
+  width: min(100%, 760px) !important;
+  margin-inline: auto;
+  aspect-ratio: auto !important;
+  background: #06111a !important;
+}
+.research-animation-card img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
