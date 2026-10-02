@@ -877,3 +877,30 @@ a.solver-version-card:hover {
 .research-media-wide figcaption {
   text-align: center;
 }
+
+/* Native-resolution research media fix */
+.research-media-inner {
+  background: #06111a !important;
+}
+.research-media-card img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+  display: block;
+  object-fit: contain !important;
+  image-rendering: auto;
+}
+.research-media-primary .research-media-inner {
+  aspect-ratio: auto !important;
+}
+.research-media-primary img {
+  aspect-ratio: auto !important;
+}
+.research-media-wide .research-media-inner {
+  width: min(100%, 534px) !important;
+  aspect-ratio: auto !important;
+  margin-inline: auto;
+}
+.research-media-wide img {
+  aspect-ratio: auto !important;
+}
