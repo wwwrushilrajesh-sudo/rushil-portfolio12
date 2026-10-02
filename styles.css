@@ -822,3 +822,45 @@ a.solver-version-card:hover {
 @media (max-width: 760px) {
   .project-deep-dive { grid-template-columns:1fr; }
 }
+
+/* E–Liu vs geometric governing equations */
+.formulation-equations {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-bottom:20px;
+}
+.formulation-equation {
+  padding:15px 16px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:13px;
+  background:rgba(5,15,23,.46);
+}
+.formulation-label {
+  display:block;
+  margin-bottom:9px;
+  color:#78d7eb;
+  font-size:.60rem;
+  letter-spacing:.10em;
+}
+.equation.equation-main {
+  margin:0;
+  padding:0;
+  border:0;
+  background:none;
+  color:#eef8fb;
+  font-family:'Times New Roman', Georgia, serif;
+  font-size:clamp(.95rem,1.45vw,1.24rem);
+  line-height:1.45;
+  letter-spacing:0;
+  overflow-wrap:anywhere;
+}
+.formulation-equation p {
+  margin:9px 0 0;
+  color:#8295a6;
+  font-size:.70rem;
+  line-height:1.5;
+}
+@media (max-width: 760px) {
+  .formulation-equations { grid-template-columns:1fr; }
+}

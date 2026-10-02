@@ -348,9 +348,18 @@
         </div>
         <div class="research-stack">
           <div class="research-panel reveal">
-            <div class="equation mono">q = u + ∇φ</div>
-            <div class="equation mono">∇²φ = ∇ · q</div>
-            <div class="equation mono">u = q − ∇φ</div>
+            <div class="formulation-equations">
+              <div class="formulation-equation">
+                <span class="formulation-label mono">E–LIU FORMULATION</span>
+                <div class="equation equation-main">∂M/∂t + (u · ∇)u − ν∇²M = 0</div>
+                <p>Advection is evaluated from the recovered physical velocity, while viscous diffusion acts on the impulse field.</p>
+              </div>
+              <div class="formulation-equation">
+                <span class="formulation-label mono">GEOMETRIC FORMULATION</span>
+                <div class="equation equation-main">∂M/∂t + (u · ∇)M − M · (∇u)ᵀ − ν∇²M = 0</div>
+                <p>The impulse itself is transported and coupled to the velocity-gradient tensor through the geometric stretching term.</p>
+              </div>
+            </div>
             <div class="research-copy">
               <h3>Current focus</h3>
               <p>Velocity–impulse formulations, projection methods, pressure recovery, numerical stability, GPU performance, and high-Reynolds-number validation. The latest solver version includes k–ω SST turbulence modeling and is planned for open-source release after the associated results are published.</p>
