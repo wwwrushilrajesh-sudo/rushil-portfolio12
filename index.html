@@ -231,13 +231,13 @@
     <section id="projects" class="section">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">FEATURED WORK</p>
-          <h2>Engineering projects, with the technical story included.</h2>
-          <p class="section-sub">Propulsion, turbomachinery, thermal design, mechatronics, and custom CFD — with the engineering question, workflow, and design value shown for each project.</p>
+          <p class="eyebrow">FLAGSHIP ENGINEERING WORK</p>
+          <h2>Propulsion, turbomachinery, and mechatronics — treated as core engineering work.</h2>
+          <p class="section-sub">The aerospike nozzle, centrifugal-pump impeller study, and gesture-controlled wheelchair are presented as major design projects with the same visual weight, technical depth, and engineering context.</p>
         </div>
 
         <div class="project-grid">
-          <article class="project-card reveal">
+          <article class="project-card project-flagship reveal">
             <figure class="project-visual photo-visual">
               <div class="visual-sprite sprite-bleed" role="img" aria-label="Truncated aerospike base-bleed contour visualization"></div>
             </figure>
@@ -256,6 +256,11 @@
                 <div><span>Workflow</span><p>MOC contour → SolidWorks geometry → CFD / base-bleed study → structural checks → 3D printing → cold-flow prototype test.</p></div>
                 <div><span>Engineering value</span><p>A full design loop connecting analytical gas dynamics to geometry, simulation, structural decisions, manufacturing, and hardware testing.</p></div>
               </div>
+              <div class="flagship-summary">
+                <div><strong>~40%</strong><span>truncated plug design</span></div>
+                <div><strong>CFD + FEA</strong><span>flow and structural analysis</span></div>
+                <div><strong>CAD → Test</strong><span>3D printed cold-flow prototype</span></div>
+              </div>
               <div class="tech-row"><span>Python</span><span>ANSYS Fluent</span><span>SolidWorks</span><span>MOC</span><span>FEA</span><span>3D Printing</span></div>
               <div class="project-code-callout">
                 <div class="project-code-copy">
@@ -267,7 +272,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card project-flagship project-flagship-reverse reveal">
             <figure class="project-visual photo-visual">
               <div class="visual-sprite sprite-pump" role="img" aria-label="Centrifugal pump geometry and flow visualization"></div>
             </figure>
@@ -286,9 +291,44 @@
                 <div><span>Analysis</span><p>Controlled geometry comparison across 5/7/9 blades using pressure rise, head, blade loading, slip, and outlet uniformity as design metrics.</p></div>
                 <div><span>Design value</span><p>The project tied aerodynamic performance to a manufacturable impeller definition instead of treating CAD and CFD as separate exercises.</p></div>
               </div>
+              <div class="flagship-summary">
+                <div><strong>5 / 7 / 9</strong><span>blade-count comparison</span></div>
+                <div><strong>CFD + GD&amp;T</strong><span>performance to manufacturability</span></div>
+                <div><strong>MRF</strong><span>rotating-flow analysis</span></div>
+              </div>
               <div class="tech-row"><span>ANSYS Fluent</span><span>TurboGrid</span><span>MRF</span><span>GD&amp;T</span><span>CAD</span></div>
             </div>
           </article>
+
+          <article class="project-card project-flagship reveal">
+            <div class="project-visual chair-visual">
+              <div class="chair-frame"></div><div class="wheel w-left"></div><div class="wheel w-right"></div><div class="gesture-wave">⌁⌁⌁</div>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>Prototype</span><span>Mechatronics</span></div>
+              <h3>Gesture-Controlled Wheelchair Prototype</h3>
+              <p>Developed an end-to-end electromechanical mobility prototype using IMU sensing, wireless communication, embedded control, and differential motor drive.</p>
+              <ul class="clean-list">
+                <li>Programmed an Arduino Nano to read MPU6050 accelerometer/gyroscope data over I2C.</li>
+                <li>Mapped calibrated wrist tilt to forward, reverse, left, right, and stop commands.</li>
+                <li>Used paired nRF24L01 modules for real-time wireless command transmission.</li>
+                <li>Drove two DC motors through an L298N dual H-bridge and tuned thresholds for stable differential steering.</li>
+              </ul>
+              <div class="project-deep-dive">
+                <div><span>System architecture</span><p>Hand-mounted transmitter with IMU + Arduino → wireless link → receiver Arduino → dual H-bridge → two drive motors.</p></div>
+                <div><span>Control challenge</span><p>Calibrate gesture thresholds strongly enough to reject unintended wrist motion while keeping the command response intuitive and responsive.</p></div>
+                <div><span>Engineering value</span><p>Integrated sensing, firmware, communication, motor electronics, and a physical mobility platform into one functioning prototype.</p></div>
+              </div>
+              <div class="flagship-summary">
+                <div><strong>IMU → RF</strong><span>gesture sensing and wireless control</span></div>
+                <div><strong>2 motors</strong><span>differential drive architecture</span></div>
+                <div><strong>Full prototype</strong><span>sensing, firmware, electronics, motion</span></div>
+              </div>
+              <div class="tech-row"><span>Arduino Nano</span><span>MPU6050</span><span>nRF24L01</span><span>L298N</span><span>Motor Control</span></div>
+            </div>
+          </article>
+
+          <div class="project-tier-heading reveal"><span class="mono">ADDITIONAL ENGINEERING WORK</span><p>Thermal-fluid and custom-CFD projects that broaden the portfolio beyond the three flagship design projects.</p></div>
 
           <article class="project-card reveal">
             <div class="project-visual project-schematic battery-visual" aria-label="Battery thermal-management schematic">
@@ -315,28 +355,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
-            <div class="project-visual chair-visual">
-              <div class="chair-frame"></div><div class="wheel w-left"></div><div class="wheel w-right"></div><div class="gesture-wave">⌁⌁⌁</div>
-            </div>
-            <div class="project-body">
-              <div class="project-topline"><span>Prototype</span><span>Mechatronics</span></div>
-              <h3>Gesture-Controlled Wheelchair Prototype</h3>
-              <p>Developed an end-to-end electromechanical mobility prototype using IMU sensing, wireless communication, embedded control, and differential motor drive.</p>
-              <ul class="clean-list">
-                <li>Programmed an Arduino Nano to read MPU6050 accelerometer/gyroscope data over I2C.</li>
-                <li>Mapped calibrated wrist tilt to forward, reverse, left, right, and stop commands.</li>
-                <li>Used paired nRF24L01 modules for real-time wireless command transmission.</li>
-                <li>Drove two DC motors through an L298N dual H-bridge and tuned thresholds for stable differential steering.</li>
-              </ul>
-              <div class="project-deep-dive">
-                <div><span>System architecture</span><p>Hand-mounted transmitter with IMU + Arduino → wireless link → receiver Arduino → dual H-bridge → two drive motors.</p></div>
-                <div><span>Control challenge</span><p>Calibrate gesture thresholds strongly enough to reject unintended wrist motion while keeping the command response intuitive and responsive.</p></div>
-                <div><span>Engineering value</span><p>Integrated sensing, firmware, communication, motor electronics, and a physical mobility platform into one functioning prototype.</p></div>
-              </div>
-              <div class="tech-row"><span>Arduino Nano</span><span>MPU6050</span><span>nRF24L01</span><span>L298N</span><span>Motor Control</span></div>
-            </div>
-          </article>
+          
 
           <article class="project-card reveal">
             <div class="project-visual project-schematic vortex-visual" aria-label="Oscillating cylinder wake schematic">

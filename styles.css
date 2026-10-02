@@ -1131,3 +1131,114 @@ a.solver-version-card:hover {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Promote aerospike, impeller and mechatronics as equal flagship projects */
+.project-grid { align-items: stretch; }
+
+.project-flagship {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(320px,.92fr) minmax(0,1.08fr);
+  min-height: 520px;
+  border-color: rgba(119,229,255,.14);
+  background:
+    linear-gradient(135deg,rgba(119,229,255,.025),rgba(159,140,255,.018)),
+    rgba(255,255,255,.032);
+  box-shadow: 0 18px 54px rgba(0,0,0,.16);
+}
+.project-flagship-reverse {
+  grid-template-columns: minmax(0,1.08fr) minmax(320px,.92fr);
+}
+.project-flagship-reverse .project-visual { order: 2; }
+.project-flagship-reverse .project-body { order: 1; }
+.project-flagship .project-visual {
+  min-height: 100%;
+  border-bottom: 0;
+  border-right: 1px solid rgba(255,255,255,.08);
+}
+.project-flagship-reverse .project-visual {
+  border-right: 0;
+  border-left: 1px solid rgba(255,255,255,.08);
+}
+.project-flagship .project-body {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:34px;
+}
+.project-flagship .project-body h3 {
+  font-size: clamp(1.35rem,2.2vw,2rem);
+  line-height:1.18;
+  margin-bottom:14px;
+}
+.project-flagship .project-body > p {
+  font-size:.98rem;
+  line-height:1.62;
+  max-width:880px;
+}
+.project-flagship .clean-list {
+  font-size:.9rem;
+  line-height:1.5;
+}
+.flagship-summary {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin-top:18px;
+}
+.flagship-summary > div {
+  padding:12px 13px;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:12px;
+  background:rgba(4,14,22,.38);
+}
+.flagship-summary strong,
+.flagship-summary span { display:block; }
+.flagship-summary strong {
+  color:#eef8fb;
+  font-size:.78rem;
+  margin-bottom:4px;
+}
+.flagship-summary span {
+  color:#7f92a5;
+  font-size:.64rem;
+  line-height:1.4;
+}
+.project-tier-heading {
+  grid-column:1 / -1;
+  margin:16px 0 0;
+  padding:18px 2px 4px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.project-tier-heading span {
+  color:#74d6e9;
+  font-size:.64rem;
+  letter-spacing:.12em;
+}
+.project-tier-heading p {
+  margin:7px 0 0;
+  max-width:760px;
+  color:#7f91a2;
+  font-size:.78rem;
+  line-height:1.5;
+}
+@media (max-width: 920px) {
+  .project-flagship,
+  .project-flagship-reverse {
+    grid-template-columns:1fr;
+    min-height:0;
+  }
+  .project-flagship-reverse .project-visual,
+  .project-flagship-reverse .project-body { order:initial; }
+  .project-flagship .project-visual,
+  .project-flagship-reverse .project-visual {
+    min-height:320px;
+    border-left:0;
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+}
+@media (max-width: 620px) {
+  .project-flagship .project-body { padding:24px; }
+  .flagship-summary { grid-template-columns:1fr; }
+}
