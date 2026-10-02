@@ -1078,3 +1078,56 @@ a.solver-version-card:hover {
   .research-showcase-media { min-height:0; padding:10px; }
   .research-showcase-topline { flex-direction:column; }
 }
+
+/* Fix equation-panel clipping/overflow and align four research capability cards */
+.research-equations-panel {
+  padding: 20px !important;
+  overflow: visible !important;
+}
+.research-equations-panel .research-block-title {
+  margin: 0 0 16px !important;
+  padding: 0 !important;
+}
+.research-equations-panel .formulation-equations {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  margin-bottom: 18px !important;
+}
+.research-equations-panel .formulation-equation {
+  min-width: 0;
+  overflow: hidden;
+  padding: 16px 18px !important;
+}
+.research-equations-panel .equation.equation-main {
+  max-width: 100%;
+  font-size: clamp(.88rem, 1.18vw, 1.12rem) !important;
+  line-height: 1.45 !important;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.research-equations-panel .formulation-equation p {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+.research-equations-panel .research-stats {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  margin-top: 0 !important;
+}
+.research-equations-panel .research-stats > div {
+  min-width: 0;
+}
+@media (max-width: 1050px) {
+  .research-equations-panel .research-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 760px) {
+  .research-equations-panel {
+    padding: 16px !important;
+  }
+  .research-equations-panel .formulation-equations,
+  .research-equations-panel .research-stats {
+    grid-template-columns: 1fr !important;
+  }
+}
