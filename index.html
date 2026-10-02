@@ -68,6 +68,42 @@
               <div class="vortex v1"></div><div class="vortex v2"></div>
             </div>
           </div>
+          <div class="research-vv reveal">
+            <div class="research-vv-head">
+              <div>
+                <span class="mono research-vv-kicker">VERIFICATION &amp; VALIDATION</span>
+                <h3>Validation is built into the thesis workflow.</h3>
+              </div>
+              <span class="research-vv-badge">Research-grade V&amp;V</span>
+            </div>
+            <p class="research-vv-intro">The solver is assessed with reference data, analytical solutions, mesh refinement, convergence controls, and computational-performance studies rather than contour plots alone.</p>
+            <div class="research-vv-grid">
+              <div class="research-vv-card">
+                <strong>Ghia cavity benchmark</strong>
+                <span>Centerline velocity comparisons for lid-driven-cavity cases at Re = 100, 500, and 1000.</span>
+              </div>
+              <div class="research-vv-card">
+                <strong>Grid-refinement study</strong>
+                <span>128², 256², and 512² grids used to track error reduction and mesh sensitivity.</span>
+              </div>
+              <div class="research-vv-card">
+                <strong>Taylor–Green vortex</strong>
+                <span>Periodic analytical benchmark used to examine velocity-decay accuracy and long-time error behavior.</span>
+              </div>
+              <div class="research-vv-card">
+                <strong>Projection convergence</strong>
+                <span>Scalar-potential residual tolerance, divergence monitoring, and projection at every RK4 stage.</span>
+              </div>
+              <div class="research-vv-card">
+                <strong>Time-step control</strong>
+                <span>Reported simulations maintain CFL below 0.5 to support stable temporal integration.</span>
+              </div>
+              <div class="research-vv-card">
+                <strong>Performance analysis</strong>
+                <span>Numba/CUDA acceleration and Poisson-solver implementation studied as part of the computational methodology.</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -233,7 +269,7 @@
               <div class="research-stats">
                 <div><strong>2D → 3D</strong><span>solver extension</span></div>
                 <div><strong>FP32 CUDA</strong><span>GPU acceleration</span></div>
-                <div><strong>Re 10²–10⁵</strong><span>validation range</span></div>
+                <div><strong>Re 10²–10⁵</strong><span>solver study range</span></div>
               </div>
             </div>
           </div>

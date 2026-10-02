@@ -60,3 +60,17 @@ Some current private research branches also use CuPy / `cupyx.scipy.fft` for dir
 ## Research status
 
 This repository is a development archive, not a packaged production CFD library. Validation, grid studies, turbulence-model assessment, and publication work are ongoing.
+
+
+## Verification and validation already established in the thesis
+
+The solver-development work is supported by a research validation workflow:
+
+- **Lid-driven cavity benchmark:** centerline velocity comparisons against established reference data for Re = 100, 500, and 1000.
+- **Grid refinement:** 128², 256², and 512² cases used to assess error reduction and grid sensitivity.
+- **Taylor–Green vortex:** periodic analytical benchmark used to study velocity-decay accuracy and long-time numerical error.
+- **Projection convergence:** scalar-potential convergence is monitored and projection is performed at each RK4 stage.
+- **Time-step control:** reported thesis simulations maintain Courant number below 0.5.
+- **Computational performance:** Numba/CUDA acceleration and Poisson-solver implementation are documented and evaluated.
+
+These are research verification/validation practices. They are not yet a fully automated regression-test/CI suite.
