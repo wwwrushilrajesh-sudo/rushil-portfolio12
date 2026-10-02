@@ -112,6 +112,45 @@
                 <li>The latest solver version models turbulence with the k–ω SST model and extends the framework toward high-Reynolds-number 3D simulation.</li>
               </ul>
               <div class="tech-row"><span>Python</span><span>Numba CUDA</span><span>Finite Difference</span><span>Projection Methods</span></div>
+              <div class="solver-version-block">
+                <div class="solver-version-head">
+                  <div>
+                    <span class="mono solver-version-kicker">SOLVER ARCHIVE</span>
+                    <h4>Development versions</h4>
+                  </div>
+                  <a class="solver-archive-link" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/tree/main/solver-versions" target="_blank" rel="noopener">Browse archive ↗</a>
+                </div>
+                <p class="solver-version-intro">Public snapshots show the progression from CPU projection solvers to CUDA and 3D LES. The current k–ω SST research branch remains private until the associated results are published.</p>
+                <div class="solver-version-grid">
+                  <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/blob/main/solver-versions/01_el_cpu_sor.py" target="_blank" rel="noopener">
+                    <span class="solver-vtag">V1 · PUBLIC</span><strong>E–Liu CPU + SOR</strong><small>2D baseline · RK4 · iterative projection</small>
+                  </a>
+                  <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/blob/main/solver-versions/02_geometric_cpu_sor.py" target="_blank" rel="noopener">
+                    <span class="solver-vtag">V2 · PUBLIC</span><strong>Geometric CPU + SOR</strong><small>2D formulation comparison · stretching term</small>
+                  </a>
+                  <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/blob/main/solver-versions/03_el_cuda_jacobi.py" target="_blank" rel="noopener">
+                    <span class="solver-vtag">V3 · PUBLIC</span><strong>E–Liu CUDA + Jacobi</strong><small>GPU projection · residual-controlled Poisson solve</small>
+                  </a>
+                  <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/blob/main/solver-versions/04_3d_geometric_semilagrangian_smagorinsky.py" target="_blank" rel="noopener">
+                    <span class="solver-vtag">V4 · PUBLIC</span><strong>3D Semi-Lagrangian + SGS</strong><small>Geometric stretching · Smagorinsky · CUDA</small>
+                  </a>
+                  <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/blob/main/solver-versions/05_3d_cuda_les_fast_v3.py" target="_blank" rel="noopener">
+                    <span class="solver-vtag">V5 · PUBLIC</span><strong>3D CUDA LES Fast V3</strong><small>Streamed RK4 · packed RB-SOR · FP32 optimization</small>
+                  </a>
+                  <div class="solver-version-card solver-version-private">
+                    <span class="solver-vtag">V6 · RESEARCH</span><strong>E–Liu + k–ω SST + DCT</strong><small>Current turbulence branch · release after publication</small>
+                  </div>
+                  <div class="solver-version-card solver-version-private">
+                    <span class="solver-vtag">V7 · RESEARCH</span><strong>Geometric + k–ω SST + DCT</strong><small>Eulerian geometric branch · release after publication</small>
+                  </div>
+                  <div class="solver-version-card solver-version-private">
+                    <span class="solver-vtag">V8 · RESEARCH</span><strong>Geometric SST Revision 2</strong><small>Retained research revision · release after publication</small>
+                  </div>
+                  <div class="solver-version-card solver-version-private">
+                    <span class="solver-vtag">V9 · RESEARCH</span><strong>Semi-Lagrangian Geometric + SST</strong><small>Experimental transport branch · release after publication</small>
+                  </div>
+                </div>
+              </div>
             </div>
           </article>
 
