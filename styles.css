@@ -558,3 +558,52 @@ h3 { font-size: 1.45rem; letter-spacing: -.025em; }
   visibility: visible !important;
   background: #f7f8fa;
 }
+
+.project-code-callout {
+  margin-top: 20px;
+  padding: 15px 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  border: 1px solid rgba(119,229,255,.13);
+  border-radius: 14px;
+  background: rgba(119,229,255,.035);
+}
+.project-code-copy strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: .88rem;
+  color: var(--text);
+}
+.project-code-copy p {
+  margin: 0;
+  color: #90a3b5;
+  font-size: .80rem;
+  line-height: 1.55;
+}
+.code-download-btn {
+  white-space: nowrap;
+  padding: 10px 13px;
+  border-radius: 10px;
+  border: 1px solid rgba(119,229,255,.28);
+  background: rgba(119,229,255,.08);
+  color: #d9f8ff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .69rem;
+  font-weight: 600;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.code-download-btn:hover {
+  background: rgba(119,229,255,.13);
+  border-color: rgba(119,229,255,.46);
+  transform: translateY(-1px);
+}
+@media (max-width: 760px) {
+  .project-code-callout {
+    grid-template-columns: 1fr;
+  }
+  .code-download-btn {
+    width: fit-content;
+  }
+}
