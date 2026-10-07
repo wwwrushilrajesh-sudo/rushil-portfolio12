@@ -23,6 +23,7 @@
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#research">Research</a>
+        <a href="#visuals">Fancy Visuals</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#contact" class="nav-cta">Contact</a>
@@ -408,6 +409,52 @@
             <div class="solver-version-card solver-version-private"><span class="solver-vtag">V9 · PRIVATE</span><strong>Semi-Lagrangian Geometric + SST</strong><small>Experimental turbulence branch</small></div>
           </div>
         </div>
+      </div>
+    </section>
+
+
+    <section id="visuals" class="section fancy-visuals">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">FANCY VISUALS</p>
+          <h2>Turning numerical methods into something you can see.</h2>
+          <p class="section-sub">A small gallery for computational experiments that make the underlying flow physics visually intuitive.</p>
+        </div>
+
+        <article class="fancy-card reveal">
+          <div class="fancy-schematic" aria-label="Schematic preview of a velocity-impulse fireworks simulation">
+            <div class="fancy-burst burst-left"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="fancy-burst burst-right"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="fancy-trail trail-left"></div>
+            <div class="fancy-trail trail-right"></div>
+            <div class="fancy-visual-label mono">VELOCITY–IMPULSE FIREWORKS</div>
+          </div>
+
+          <div class="fancy-copy">
+            <div class="project-topline"><span>GPU CFD</span><span>Flow Visualization</span></div>
+            <h3>Impulse Fireworks</h3>
+            <p>Built a 2-D GPU-accelerated “fireworks” visualization from the velocity–impulse formulation rather than treating the effect as a particle-only animation. Localized impulse injections are projected into an incompressible velocity field so the rockets, bursts, and secondary crackle are carried by resolved vortex structures.</p>
+
+            <div class="project-deep-dive">
+              <div>
+                <span>What was done</span>
+                <p>Prescribed launch paths inject localized impulse into the flow. At the burst point, timed radial impulse kicks generate many outward-traveling vortex dipoles, with optional secondary crackle events.</p>
+              </div>
+              <div>
+                <span>Numerical method</span>
+                <p>Semi-Lagrangian impulse transport, covector stretching, a DCT-based incompressibility projection, and clamped-MacCormack advection for the passive RGB dye field.</p>
+              </div>
+              <div>
+                <span>Rendering</span>
+                <p>The advected dye is converted into a cinematic visualization using GPU glow, filmic tone mapping, gamma correction, and frame-by-frame export on a black background.</p>
+              </div>
+            </div>
+
+            <div class="tech-row">
+              <span>Numba CUDA</span><span>CuPy</span><span>DCT Projection</span><span>MacCormack</span><span>Velocity–Impulse</span>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
