@@ -1487,3 +1487,29 @@ a.solver-version-card:hover {
   .fancy-copy { padding: 22px; }
   .fancy-schematic { min-height: 300px; }
 }
+
+
+/* Actual Fancy Visuals media */
+.fancy-media {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  min-width: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border-right: 1px solid rgba(255,255,255,.08);
+  background: #000;
+}
+.fancy-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}
+@media (max-width: 900px) {
+  .fancy-media {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+}
