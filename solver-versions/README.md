@@ -11,7 +11,7 @@ The first two development snapshots remain available:
 
 [Version 1.0 — LES Modeled Geometric Impulse](./v1.0-les-modeled-geometric-impulse/)
 
-The current simulation backend is written entirely in CUDA C++, with Python used for the frontend and post-processing. This source release contains the current backend file; see its README for scope and numerical implementation.
+The current simulation backend is written entirely in CUDA C++, with Python used for the frontend and post-processing. This release contains the complete frontend, bridge, backend, reporting and build pipeline; see its README for scope and numerical implementation.
 
 Currently working on reducing numerical diffusion artifacts from discretization and optimizing CUDA kernels. Future changes will be documented in subsequent releases.
 
