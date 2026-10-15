@@ -43,7 +43,7 @@
             <a class="btn secondary" href="#research">View Research</a>
           </div>
           <div class="hero-metrics">
-            <div><strong>GPU CFD</strong><span>CUDA / Python</span></div>
+            <div><strong>GPU CFD</strong><span>CUDA C++ / Python</span></div>
             <div><strong>100k</strong><span>Reynolds-number LES studies</span></div>
             <div><strong>CAD → CAM</strong><span>Design to fabrication</span></div>
           </div>
@@ -297,12 +297,12 @@
           <div class="research-system-card">
             <span class="mono research-vv-kicker">02 · SOLVER ARCHITECTURE</span>
             <h3>Advance impulse. Project. Recover velocity. Repeat.</h3>
-            <p>Impulse variables are advanced in time, the scalar-potential constraint is solved, the divergence-free velocity is reconstructed, and the projection is repeated at each RK stage while residuals and divergence are monitored.</p>
+            <p>The current 3D geometric-impulse solver advances impulse using semi-Lagrangian transport with RK4 characteristic tracing, local implicit stretching, backward-Euler molecular diffusion, and WALE subgrid stresses. Projection recovers an incompressible velocity field. The entire simulation backend is written in CUDA C++, including GPU kernels and the host routines that coordinate them; Python provides the frontend and post-processing.</p>
           </div>
           <div class="research-system-card">
             <span class="mono research-vv-kicker">03 · CURRENT DIRECTION</span>
-            <h3>Turbulence-ready + neural φ acceleration.</h3>
-            <p>Current work extends the solver toward modular turbulence modeling and an offline-trained neural-network φ predictor used as a fast warm start before the classical Poisson solve performs the final physics-enforcing correction.</p>
+            <h3>Reduce numerical diffusion. Optimize CUDA kernels.</h3>
+            <p>Currently working on reducing numerical diffusion artifacts from discretization and optimizing CUDA kernels. Development focuses on preserving wake and vortex structures while reducing unnecessary GPU memory traffic and kernel-launch overhead. Version 1.0 establishes the LES-modeled geometric-impulse release series; future updates will be documented as new versions.</p>
           </div>
         </div>
 
@@ -346,7 +346,7 @@
             <div class="research-vv-card"><strong>Taylor–Green vortex</strong><span>Periodic analytical benchmark used to examine viscous velocity decay and long-time numerical error.</span></div>
             <div class="research-vv-card"><strong>Projection convergence</strong><span>Scalar-potential residual tolerance, divergence monitoring, and projection at every RK4 stage.</span></div>
             <div class="research-vv-card"><strong>Time-step control</strong><span>Reported thesis simulations maintain Courant number below 0.5.</span></div>
-            <div class="research-vv-card"><strong>GPU performance</strong><span>Numba/CUDA acceleration and Poisson-solver implementations are profiled as part of the computational methodology.</span></div>
+            <div class="research-vv-card"><strong>GPU performance</strong><span>GPU acceleration and Poisson-solver implementations are evaluated as part of the computational methodology. Current development uses a CUDA C++ backend with a Python frontend.</span></div>
           </div>
         </div>
 
@@ -392,21 +392,22 @@
           <div class="solver-version-head">
             <div>
               <span class="mono solver-version-kicker">SOLVER ARCHIVE</span>
-              <h4>Development versions</h4>
+              <h4>Solver releases and original baselines</h4>
             </div>
-            <a class="solver-archive-link" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/tree/main/solver-versions" target="_blank" rel="noopener">Browse archive ↗</a>
+            <a class="solver-archive-link" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/tree/main/solver-versions/v1.0-les-modeled-geometric-impulse" target="_blank" rel="noopener">Version 1.0 source ↗</a>
           </div>
-          <p class="solver-version-intro">Only non-turbulence solver snapshots are public for now. All LES, SGS, and k–ω SST source branches are withheld until publication.</p>
+          <p class="solver-version-intro">The first two CPU baselines remain available below. The current CUDA C++ backend is published as Version 1.0 — LES Modeled Geometric Impulse, with subsequent updates to follow in this release series.</p>
           <div class="solver-version-grid">
             <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/blob/main/solver-versions/01_el_cpu_sor.py" target="_blank" rel="noopener"><span class="solver-vtag">V1 · PUBLIC</span><strong>E–Liu CPU + SOR</strong><small>2D baseline · RK4 · iterative projection</small></a>
             <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/blob/main/solver-versions/02_geometric_cpu_sor.py" target="_blank" rel="noopener"><span class="solver-vtag">V2 · PUBLIC</span><strong>Geometric CPU + SOR</strong><small>2D formulation comparison · stretching term</small></a>
-            <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/blob/main/solver-versions/03_el_cuda_jacobi.py" target="_blank" rel="noopener"><span class="solver-vtag">V3 · PUBLIC</span><strong>E–Liu CUDA + Jacobi</strong><small>GPU projection · residual-controlled Poisson solve</small></a>
-            <div class="solver-version-card solver-version-private"><span class="solver-vtag">V4 · PRIVATE</span><strong>3D Semi-Lagrangian + SGS</strong><small>Turbulence research source withheld</small></div>
-            <div class="solver-version-card solver-version-private"><span class="solver-vtag">V5 · PRIVATE</span><strong>3D CUDA LES Fast V3</strong><small>Turbulence research source withheld</small></div>
-            <div class="solver-version-card solver-version-private"><span class="solver-vtag">V6 · PRIVATE</span><strong>E–Liu + k–ω SST + DCT</strong><small>Current turbulence branch</small></div>
-            <div class="solver-version-card solver-version-private"><span class="solver-vtag">V7 · PRIVATE</span><strong>Geometric + k–ω SST + DCT</strong><small>Eulerian geometric turbulence branch</small></div>
-            <div class="solver-version-card solver-version-private"><span class="solver-vtag">V8 · PRIVATE</span><strong>Geometric SST Revision 2</strong><small>Research revision</small></div>
-            <div class="solver-version-card solver-version-private"><span class="solver-vtag">V9 · PRIVATE</span><strong>Semi-Lagrangian Geometric + SST</strong><small>Experimental turbulence branch</small></div>
+            <a class="solver-version-card" href="https://github.com/wwwrushilrajesh-sudo/rushil-portfolio12/tree/main/solver-versions/v1.0-les-modeled-geometric-impulse" target="_blank" rel="noopener"><span class="solver-vtag">VERSION 1.0 · PUBLIC</span><strong>LES Modeled Geometric Impulse</strong><small>3D MAC grid · WALE LES · CUDA C++ backend · Python frontend</small></a>
+          </div>
+          <div class="project-code-callout">
+            <div class="project-code-copy">
+              <strong>Version 1.0 — LES Modeled Geometric Impulse</strong>
+              <p>The entire simulation backend is written in CUDA C++: impulse transport, stretching, molecular diffusion, WALE stresses, boundary treatment, projection, and timestep coordination. Python handles the frontend and post-processing. Current work targets numerical diffusion artifacts from discretization and CUDA kernel optimization.</p>
+            </div>
+            <a class="code-download-btn" href="solver-versions/v1.0-les-modeled-geometric-impulse/backend.cu" download="backend.cu">Download CUDA C++ Backend</a>
           </div>
         </div>
       </div>
