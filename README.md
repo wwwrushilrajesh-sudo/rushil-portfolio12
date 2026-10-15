@@ -2,25 +2,13 @@
 
 Responsive static portfolio for CFD, scientific computing, mechanical design, product development, mechatronics, and thermal-fluid engineering.
 
-## Velocity–Impulse CFD solver archive
+## Velocity–Impulse CFD solver releases
 
-The repository includes selected **non-turbulence** development snapshots in [`solver-versions/`](./solver-versions/).
+The original [E–Liu CPU/SOR](./solver-versions/01_el_cpu_sor.py) and [Geometric CPU/SOR](./solver-versions/02_geometric_cpu_sor.py) baselines remain public.
 
-| Version | Status | Description |
-|---|---|---|
-| V1 | Public | 2D E–Liu CPU solver with RK4 + SOR projection |
-| V2 | Public | 2D geometric impulse solver with stretching contribution |
-| V3 | Public | CUDA E–Liu solver with residual-controlled Jacobi projection |
-| V4 | Private | 3D semi-Lagrangian + SGS research branch |
-| V5 | Private | 3D CUDA LES performance branch |
-| V6 | Private | E–Liu + k–ω SST + direct DCT projection |
-| V7 | Private | Eulerian geometric + k–ω SST + DCT projection |
-| V8 | Private | Geometric SST revision 2 |
-| V9 | Private | Semi-Lagrangian geometric + k–ω SST |
+The current release is [Version 1.0 — LES Modeled Geometric Impulse](./solver-versions/v1.0-les-modeled-geometric-impulse/). Its entire simulation backend is written in CUDA C++; Python provides the frontend and post-processing. The release publishes the current backend source.
 
-**All turbulence-modeling source code is being withheld from the public repository for now.** The current plan is to release the relevant research branches after publication of the associated results.
-
-[Browse the public solver archive](./solver-versions/README.md)
+Currently working on reducing numerical diffusion artifacts from discretization and optimizing CUDA kernels. Further updates will follow as versioned releases.
 
 ## Portfolio coverage
 
