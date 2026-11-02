@@ -53,6 +53,13 @@ The recovered frontend defaults are preserved: Re = 3900, 28 cells per diameter 
 
 The backend implements RK4 characteristic tracing, bounded MacCormack transport, local implicit stretching, backward-Euler molecular diffusion with red-black iterations, WALE subgrid stresses, and Poisson projection. Optional PIC/FLIP and Eulerian modes are exposed through the configuration.
 
+
+## Research status
+
+This is an ongoing independent research project by Rushil Rajesh. The LES and impulse-based turbulence solver is under active development, and benchmark validation is in progress. The simulation backend is implemented in CUDA C++, with Python handling configuration, the ctypes interface, diagnostics, and post-processing.
+
+The small-grid `validate_gpu.py` checks are implementation checks; they do not establish completed physical benchmark validation. Laminar E–Liu versus geometric formulation comparisons belong to the separate M.S. thesis workflow.
+
 ## Current work
 
 Currently working on reducing numerical diffusion artifacts from discretization and optimizing CUDA kernels, with emphasis on vortex preservation, memory traffic, and computational performance.

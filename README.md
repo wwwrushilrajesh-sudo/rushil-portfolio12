@@ -8,7 +8,7 @@ The original [E–Liu CPU/SOR](./solver-versions/01_el_cpu_sor.py) and [Geometri
 
 The current release is [Version 1.0 — LES Modeled Geometric Impulse](./solver-versions/v1.0-les-modeled-geometric-impulse/). Its entire simulation backend is written in CUDA C++; Python provides the frontend and post-processing. The release includes the complete Python frontend, ctypes bridge, current CUDA C++ backend, reporting tools and Windows/Linux build scripts.
 
-Currently working on reducing numerical diffusion artifacts from discretization and optimizing CUDA kernels. Further updates will follow as versioned releases.
+This is ongoing independent research, with benchmark validation in progress. Currently working on reducing numerical diffusion artifacts from discretization and optimizing CUDA kernels. Further updates will follow as versioned releases.
 
 ## Portfolio coverage
 

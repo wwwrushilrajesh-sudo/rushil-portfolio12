@@ -41,6 +41,7 @@
           <div class="hero-actions">
             <a class="btn primary" href="#projects">Explore Projects</a>
             <a class="btn secondary" href="#research">View Research</a>
+            <a class="btn secondary" href="downloads/Rushil_Rajesh_CFD_Solver_Developer_Resume.pdf">Download Resume</a>
           </div>
           <div class="hero-metrics">
             <div><strong>GPU CFD</strong><span>CUDA C++ / Python</span></div>
@@ -81,7 +82,7 @@
           <h2>I build across simulation, design, computation, and hardware.</h2>
         </div>
         <div class="about-copy reveal">
-          <p>I am a mechanical engineer working at the intersection of computational fluid dynamics, numerical methods, and product development. My graduate research centers on an incompressible velocity–impulse formulation for high-Reynolds-number flow, including GPU acceleration, pressure/velocity recovery, turbulence modeling, and validation against canonical cavity-flow data.</p>
+          <p>I am a mechanical engineer working at the intersection of computational fluid dynamics, numerical methods, and product development. My graduate research compares E–Liu and geometric velocity–impulse formulations for incompressible laminar flow. Separately, my independent research develops an LES and impulse-based turbulence solver with a CUDA C++ backend and Python frontend; benchmark validation is in progress.</p>
           <p>Beyond solver development, I have worked on turbomachinery, aerospike nozzle design, centrifugal pump optimization, thermal systems, GD&amp;T, machining, CAM/CNC workflows, 3D printing, and mechatronics prototypes.</p>
           <div class="about-tags">
             <span>Fluid Mechanics</span><span>Numerical Methods</span><span>GPU Computing</span><span>Product Development</span><span>CAD / CAM</span><span>Mechatronics</span>
@@ -279,12 +280,12 @@
         <div class="section-heading research-heading reveal">
           <p class="eyebrow">GRADUATE RESEARCH · CFD SOLVER DEVELOPMENT</p>
           <h2>Velocity–Impulse Incompressible Flow Solver</h2>
-          <p class="section-sub research-lede">A unified research program around impulse-based incompressible CFD: formulation comparison, projection methods, GPU acceleration, verification and validation, high-Re turbulence modeling, and ML-assisted scalar-potential prediction.</p>
+          <p class="section-sub research-lede">M.S. thesis work compares E–Liu and geometric formulations for laminar incompressible flow. Independent research extends the geometric-impulse approach to LES, with a CUDA C++ simulation backend, Python frontend, and ongoing benchmark validation.</p>
 
           <div class="research-worldfirst">
-            <span class="mono">WORLD-FIRST RESEARCH TARGET</span>
-            <strong>Developing what is intended to be the world’s first turbulence-capable velocity–impulse CFD solver.</strong>
-            <p>The priority claim is presented as a research target while the literature review and publication process are still ongoing.</p>
+            <span class="mono">INDEPENDENT RESEARCH · IN DEVELOPMENT</span>
+            <strong>Developing an LES and impulse-based turbulence solver.</strong>
+            <p>The simulation backend is implemented in CUDA C++. Benchmark validation is in progress; the research is not presented as a completed validation study.</p>
           </div>
         </div>
 
@@ -302,7 +303,7 @@
           <div class="research-system-card">
             <span class="mono research-vv-kicker">03 · CURRENT DIRECTION</span>
             <h3>Reduce numerical diffusion. Optimize CUDA kernels.</h3>
-            <p>Currently working on reducing numerical diffusion artifacts from discretization and optimizing CUDA kernels. Development focuses on preserving wake and vortex structures while reducing unnecessary GPU memory traffic and kernel-launch overhead. Version 1.0 establishes the LES-modeled geometric-impulse release series; future updates will be documented as new versions.</p>
+            <p>Independent research is ongoing, with benchmark validation currently in progress. Current work also addresses numerical diffusion artifacts from discretization and CUDA kernel optimization. Development focuses on preserving wake and vortex structures while reducing unnecessary GPU memory traffic and kernel-launch overhead. Version 1.0 establishes the LES-modeled geometric-impulse release series; future updates will be documented as new versions.</p>
           </div>
         </div>
 
@@ -405,7 +406,7 @@
           <div class="project-code-callout">
             <div class="project-code-copy">
               <strong>Version 1.0 — LES Modeled Geometric Impulse</strong>
-              <p>The entire simulation backend is written in CUDA C++: impulse transport, stretching, molecular diffusion, WALE stresses, boundary treatment, projection, and timestep coordination. Python handles the frontend and post-processing. The download includes the frontend, native bridge, CUDA C++ source, reporting tools, dependencies, and Windows/Linux build scripts. Current work targets numerical diffusion artifacts from discretization and CUDA kernel optimization.</p>
+              <p>The entire simulation backend is written in CUDA C++: impulse transport, stretching, molecular diffusion, WALE stresses, boundary treatment, projection, and timestep coordination. Python handles the frontend and post-processing. The download includes the frontend, native bridge, CUDA C++ source, reporting tools, dependencies, and Windows/Linux build scripts. This independent research project is in development, with benchmark validation in progress. Current work also targets numerical diffusion artifacts and CUDA kernel optimization.</p>
             </div>
             <a class="code-download-btn" href="downloads/LES_Modeled_Geometric_Impulse_v1.0.zip" download="LES_Modeled_Geometric_Impulse_v1.0.zip">Download Complete Pipeline</a>
           </div>
@@ -467,7 +468,7 @@
         </div>
         <div class="skills-grid">
           <div class="skill-card reveal"><span class="skill-index mono">01</span><h3>CFD & Fluids</h3><p>Incompressible flow, turbulence, LES/RANS concepts, turbomachinery, compressible flow, numerical discretization, validation.</p><div class="skill-tags"><span>ANSYS Fluent</span><span>CFX</span><span>STAR-CCM+</span></div></div>
-          <div class="skill-card reveal"><span class="skill-index mono">02</span><h3>Scientific Computing</h3><p>GPU acceleration, iterative/direct solvers, finite differences, time integration, performance analysis, visualization.</p><div class="skill-tags"><span>Python</span><span>Numba CUDA</span><span>MATLAB</span></div></div>
+          <div class="skill-card reveal"><span class="skill-index mono">02</span><h3>Scientific Computing</h3><p>GPU acceleration, iterative/direct solvers, finite differences, time integration, performance analysis, visualization.</p><div class="skill-tags"><span>CUDA C++</span><span>Python</span><span>Numba CUDA</span><span>MATLAB</span></div></div>
           <div class="skill-card reveal"><span class="skill-index mono">03</span><h3>Mechanical Design</h3><p>Parametric CAD, GD&amp;T, FEA-informed design, product development, drawing interpretation, design-for-manufacture.</p><div class="skill-tags"><span>SolidWorks</span><span>Fusion 360</span><span>Inventor</span><span>Creo</span></div></div>
           <div class="skill-card reveal"><span class="skill-index mono">04</span><h3>Manufacturing</h3><p>Machining fundamentals, lathing, milling, CAM workflows, CNC code generation, additive manufacturing.</p><div class="skill-tags"><span>CAM</span><span>CNC</span><span>3D Printing</span></div></div>
           <div class="skill-card reveal"><span class="skill-index mono">05</span><h3>Mechatronics</h3><p>Prototype integration across mechanical systems, embedded electronics, sensors, actuators, and control logic.</p><div class="skill-tags"><span>Arduino</span><span>Sensors</span><span>Motor Control</span></div></div>
@@ -485,7 +486,7 @@
         <div class="timeline">
           <article class="timeline-item reveal">
             <div class="timeline-date mono">2025 — Present</div>
-            <div class="timeline-content"><h3>Graduate Research Assistant</h3><p class="muted">University of Cincinnati</p><p>Developing and validating GPU-accelerated velocity–impulse numerical methods for incompressible flows, with extensions toward three-dimensional high-Reynolds-number simulation.</p></div>
+            <div class="timeline-content"><h3>Graduate Research Assistant</h3><p class="muted">University of Cincinnati</p><p>Developing and validating GPU-accelerated velocity–impulse numerical methods for incompressible laminar flows, comparing E–Liu and geometric formulations.</p></div>
           </article>
           <article class="timeline-item reveal">
             <div class="timeline-date mono">M.S.</div>
